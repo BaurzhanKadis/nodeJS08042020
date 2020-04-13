@@ -4,7 +4,10 @@
   "description": "server developer",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -17,8 +20,11 @@
   },
   "homepage": "https://github.com/BaurzhanKadis/nodeJS08042020#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "config": "^3.3.1",
     "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.7"
   },
   "devDependencies": {
