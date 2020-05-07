@@ -7,9 +7,8 @@ const jwt = require('jsonwebtoken');
 const router = Router();
 
 
-// /api/auth/registration
-router.post(
-  '/registration',
+// /api/auth/register
+router.post('/register',
   [
     check('email', 'Некорректный Email').isEmail(),
     check('password', 'Минимальная длинна пороля 6 символов').isLength({min:6})
@@ -23,20 +22,28 @@ router.post(
         message: "Некорректные данные при регистрации"
       })
     }
+
     const {email, password} = req.body;
+
     const condidate = await User.findOne({ email });
+
     if (condidate) {
       return res.status(400).json({message: "Такой пользователь уже существует!"})
     }
+
     const hashedPassowrd = await bcrypt.hash(password, 12);
+
     const user = new User({
       email,
       password: hashedPassowrd
     });
+
     await user.save();
+
     res.status(201).json({ message: "Пользователь создан"})
+
   } catch (e) {
-    res.status(500).json({ message: "Что0то пошло не так....."})
+    res.status(500).json({ message: "Что-то пошло не так.....регистрации"})
   }
 });
 // /api/auth/login
@@ -73,4 +80,5 @@ router.post('/login',
       res.status(500).json({ message: "Что0то пошло не так....."})
     }
 });
+
 module.exports = router;

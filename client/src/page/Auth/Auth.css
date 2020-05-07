@@ -1,0 +1,53 @@
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  height: 100%;
+  background: #ece5e3;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#ece5e3),
+    to(#4f95e9)
+  );
+  background: linear-gradient(to bottom right, #ece5e3, #4f95e9);
+}
+.auth__top {
+  text-align: center;
+  margin-bottom: 50px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.auth__top h2 {
+  font-size: 28px;
+}
+.auth__top p {
+  font-size: 18px;
+  letter-spacing: 0.1px;
+  line-height: 21px;
+  opacity: 0.5;
+}
+.auth__content {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: white;
+  padding: 25px 25px 0;
+}

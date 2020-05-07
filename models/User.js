@@ -1,7 +1,7 @@
 const {Schema, model, Types} = require('mongoose');
 
 const schema = new Schema({
-  emal: {
+  email: {
     type: String,
     required: true,
     unique: true,
@@ -9,6 +9,10 @@ const schema = new Schema({
   password: {
     type: String,
     required: true
+  },
+  userName: {
+    type: String,
+    required: true,
   },
   links:
     [{ type: Types.ObjectId, ref: 'Link' }]
