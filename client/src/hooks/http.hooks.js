@@ -5,7 +5,7 @@ export const useHttp = () => {
   const [error, setError] = useState(null);
 
   const request = useCallback(
-    async (url, method = "GET", body = null, headers = {}) => {
+    async (url, method = 'GET', body = null, headers = {}) => {
       setLoading(true);
       try {
         if (body) {
@@ -13,21 +13,18 @@ export const useHttp = () => {
           headers["Content-Type"] = "application/json";
         }
         const response = await fetch(url, {method, body, headers})
-        console.log(response, "респоны")
         const data = await response.json()
-
         if (response.ok) {
           console.log("Все хорошо");
         } else {
-          throw new Error("Что-то пошло не так где хок");
+          // throw new Error("Что-то пошло не так где хок");
         }
-
         setLoading(false);
-
         return data;
       } catch (e) {
         setLoading(false);
         setError(e.message);
+        // console.log(error, "errorState")
         throw e;
       }
     },

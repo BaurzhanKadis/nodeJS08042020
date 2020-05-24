@@ -12,7 +12,7 @@ class Auth extends Component {
       <section className="auth">
       <div className="auth__content">
         <Switch>
-          <Route exact path={["/", "/login"]} component={LoginForm}/>
+          <Route exact path="/login" component={LoginForm}/>
           <Route exact path="/register" component={RegisterForm}/>
         </Switch>
       </div>

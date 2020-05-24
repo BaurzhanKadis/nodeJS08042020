@@ -2,12 +2,13 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { useHttp } from '../../hooks/http.hooks';
 
-import { Form, Input, Tooltip, Button } from 'antd';
+import { Form, Input, Tooltip, Button, message } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 
 const RegisterForm = () => {
   const {loading, request } = useHttp();
   const [ form, setForm ] = useState();
+
   const changeHendler = event => {
     setForm({ ...form, [event.target.name]: event.target.value })
   }
@@ -19,9 +20,9 @@ const RegisterForm = () => {
   const registerHandler = async () => {
     try {
       const data = await request('/api/auth/register', 'POST', {...form});
-      console.log("DATA", data)
+      message.warning(data.message)
     } catch (e) {
-      console.log("DATA нету", e)
+      message.warning(e.message)
     }
   };
 
@@ -68,7 +69,7 @@ const RegisterForm = () => {
         >
           <Form.Item
             name="email"
-            // onChange={changeHendler}
+            onChange={changeHendler}
             label="E-mail"
             rules={[
               {
@@ -88,7 +89,7 @@ const RegisterForm = () => {
 
           <Form.Item
             name="password"
-            // onChange={changeHendler}
+            onChange={changeHendler}
             label="Password"
             rules={[
               {
@@ -130,6 +131,7 @@ const RegisterForm = () => {
 
           <Form.Item
             name="nickname"
+            onChange={changeHendler}
             label={
               <span>
                 Nickname&nbsp;
@@ -146,7 +148,7 @@ const RegisterForm = () => {
               },
             ]}
           >
-            <Input />
+            <Input name="nickname" onChange={changeHendler}/>
           </Form.Item>        
           
           <Form.Item {...tailFormItemLayout}>
@@ -170,7 +172,6 @@ const RegisterForm = () => {
       </React.Fragment>
   );
 };
-
 export default RegisterForm;
 
 // class RegisterForm extends Component {

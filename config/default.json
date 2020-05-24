@@ -1,5 +1,5 @@
 {
   "port": 5000,
   "jwtSecret": "Test baur mern",
-  "mongoUri": "mongodb+srv://baurSochi:1379@cluster0-fmnff.azure.mongodb.net/app?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://Baurzhan:01081988baur@cluster0-q5vrg.azure.mongodb.net/app?retryWrites=true&w=majority"
 }

@@ -1,0 +1,219 @@
+header {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--mainBlack);
+}
+.header {
+  max-width: 81%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "logo nav user";
+  /* grid-template-columns: 1fr 5fr 1fr; */
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  padding: 22px 0;
+  grid-area: logo;
+}
+.logo a {
+  text-decoration: none;
+}
+.logo_title {
+  margin: 0;
+  color: var(--mainGreen);
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.nav {
+  /* transition: 0.5s; */
+  grid-area: nav;
+}
+.nav-item {
+  display: inline;
+  /* padding-left: 39px; */
+}
+.nav-item a {
+  color: var(--mainWhite);
+  font-size: 14px;
+  padding: 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.nav-item a:hover {
+  color: var(--mainBlack);
+  background-color: var(--mainWhite);
+}
+.nav-bar {
+  width: 100%;
+  background-color: var(--mainBlack);
+  z-index: 2;
+  position: absolute;
+  top: 60px;
+  right: 100%;
+  transition: 0.5s;
+}
+.nav-bar ul {
+  padding: 0;
+}
+.nav-bar.active {
+  right: 0%;
+}
+.nav-bar-item {
+  list-style: none;
+  border-top: 1px solid var(--mainGreen);
+}
+.nav-bar-item a {
+  color: var(--mainWhite);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* padding: 0 30px; */
+  /* border-radius: 20px; */
+  text-transform: capitalize;
+  text-decoration: none;
+  /* font-weight: 900; */
+  font-family: "Montserrat", sans-serif;
+}
+.nav-bar-item a:hover {
+  color: var(--mainWhite);
+  background-color: var(--mainGreen);
+}
+.nav-bar-item a i {
+  font-size: 25px;
+  color: var(--mainWhite);
+  padding: 0 7px;
+}
+.menu {
+  grid-area: menu;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: none;
+  background-color: var(--mainBlack);
+  border-radius: 10px;
+  position: relative;
+  z-index: 3;
+}
+.menu span {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  top: calc(50% - 1px);
+  left: calc(29% - 1px);
+  transition: 0.5s;
+}
+.menu span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.menu span:nth-child(3) {
+  transform: translateY(10px);
+}
+.menu.active span:nth-child(1) {
+  transform: translateY(0px) rotate(45deg);
+  -webkit-transform: translateY(0px) rotate(45deg);
+  -moz-transform: translateY(0px) rotate(45deg);
+  -ms-transform: translateY(0px) rotate(45deg);
+  -o-transform: translateY(0px) rotate(45deg);
+}
+.menu.active span:nth-child(3) {
+  transform: translateY(0px) rotate(-45deg);
+}
+.menu.active span:nth-child(2) {
+  display: none;
+  /* transform: translateY(0px) rotate(-45deg); */
+}
+/* User Accaunt */
+.userName {
+  grid-area: user;
+  display: grid;
+  grid-template-areas: "userIcon logout"
+                       "userName logout";
+  text-align: center;
+  align-items: center;
+  color: var(--mainWhite);
+}
+.userIcon {
+  grid-area: userIcon;
+}
+
+.userName span {
+  grid-area: userName;
+  color: var(--mainWhite);
+  font-size: 14px;
+  text-transform: capitalize;
+  display: block;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.logout {
+  grid-area: logout;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.userNameLock {
+  text-align: center;
+}
+.userNameLock a {
+  color: var(--mainWhite);
+  font-size: 14px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.userLock {
+  display: block;
+  color: var(--mainWhite);
+}
+@media (max-width: 992px) {
+  .header {
+    max-width: 90%;
+  }
+  .section-one__img {
+    display: none;
+  }
+  .blog-item__title {
+    width: 69%;
+  }
+  .section-one__blog {
+    padding: 150px 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    max-width: 100%;
+    grid-template-areas: "menu user"
+                         "logo logo";
+  }
+  .logo {
+    text-align: center;
+    background-color: var(--mainGrey);;
+    padding: 5px 0;
+  }
+  .userName {
+    padding-right: 15px;
+  }
+  .menu {
+    display: block;
+    left: 10px;
+  }
+  .nav {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .nav-bar {
+    display: none;
+  }
+}
+.new-items,
+.new-item {
+  display: none;
+}
