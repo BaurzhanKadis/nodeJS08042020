@@ -1,0 +1,23 @@
+.setting_params-container {
+  width: 100%;
+  height: 38px;
+  padding-left: 20px;
+  background-color: var(--mainBlack);
+}
+.setting_params-link {
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+.setting_params-link i {
+  font-size: 25px;
+  position: absolute;
+  top: -5px;
+  color: var(--mainWhite);
+}
+.setting_params-link span {
+  padding-left: 40px;
+  font-size: 20px;
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+}

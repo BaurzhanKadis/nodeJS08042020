@@ -137,6 +137,12 @@ const NavBar = () => {
     case '/stock-market':
       title = "Биржа";
       break;
+    case '/login':
+      title = "Авторизация";
+      break;
+    case '/register':
+      title = "Регистрация";
+      break;
     default:
       title = "Главная";
   }

@@ -19,7 +19,7 @@ main {
   width: 100%;
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--mainFontsGithic), sans-serif;
   font-size: 18px;
   position: absolute;
 }
@@ -33,7 +33,7 @@ main {
   background-color: var(--mainGreen);
   padding: 8px;
   color: var(--mainWhite);
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--mainFontsGithic), sans-serif;
 }
 .banner_link:hover {
   color: var(--mainGreen);

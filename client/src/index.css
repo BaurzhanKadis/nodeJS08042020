@@ -8,17 +8,23 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'centuryGothic';
+  src: local('centuryGothic'), url(./assets/fonts/centuryGothic.ttf) format('ttf');
+}
+/* @import  url('./assets/fonts/centuryGothic.ttf'); */
 :root {
   --mainWhite: #fff;
   --mainBlack: #292929;
   --mainGreen: #00c500;
   --mainGrey: #848484;
+  --mainFontsGithic: "centuryGothic";
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,900");
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 .wrapper {
   height: 100vh;
 }
