@@ -15,9 +15,10 @@ body {
 /* @import  url('./assets/fonts/centuryGothic.ttf'); */
 :root {
   --mainWhite: #fff;
-  --mainBlack: #292929;
-  --mainGreen: #00c500;
-  --mainGrey: #848484;
+  --mainBlack: #2B2A29;
+  --mainGreen: #66B337;
+  --mainGrey: #434242;
+  --mainRed: #E31E24;
   --mainFontsGithic: "centuryGothic";
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,900");

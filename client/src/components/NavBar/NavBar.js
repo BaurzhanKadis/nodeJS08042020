@@ -46,6 +46,11 @@ const NavBar = () => {
       href: "/"
     },
     {
+      name: "Likes kill",
+      icon: <i className="fas fa-search"></i>,
+      href: "/likes-kill"
+    },
+    {
       name: "Сообщения",
       icon: <i className="fas fa-search"></i>,
       href: "/"
@@ -142,6 +147,9 @@ const NavBar = () => {
       break;
     case '/register':
       title = "Регистрация";
+      break;
+    case '/likes-kill':
+      title = `"Likes kill"`;
       break;
     default:
       title = "Главная";

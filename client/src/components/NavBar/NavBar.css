@@ -98,7 +98,7 @@ header {
 }
 .title_page span {
   color: var(--mainWhite);
-  font-size: 14px;
+  font-size: 20px;
   text-transform: capitalize;
   display: block;
   font-weight: 900;

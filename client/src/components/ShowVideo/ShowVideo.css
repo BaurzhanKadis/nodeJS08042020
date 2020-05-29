@@ -1,0 +1,128 @@
+.showVideo-container {
+  margin: 10px;
+  background-color: var(--mainBlack);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.top_info {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+}
+.top_info-avatar {
+  width: 50px;
+}
+.top_info-avatar img {
+  width: 100%;
+}
+.top_info-title {
+  padding-left: 20px;
+  font-size: 18px;
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+.top_info-title span {
+  display: block;
+}
+.top_info-title_nickName {
+  color: var(--mainGreen);
+  position: relative;
+}
+.top_info-title_nickName::after {
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--mainGreen);
+}
+.top_info-title_fillName {
+  color: var(--mainWhite);
+}
+.infoBlock {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+}
+.infoBlock::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 4%;
+  height: 2px;
+  width: 90%;
+  background-color: var(--mainGreen);
+}
+.infoBlock li {
+  list-style: none;
+  display: inline-block;
+}
+.infoBlock li img {
+  width: 28px;
+  margin-right: 10px;
+}
+.infoBlock li span {
+  color: var(--mainWhite);
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+.bottum_buttons-container {
+  margin: 30px 0;
+  text-align: center;
+}
+.buttonDisLike, .buttonLike {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 56px;
+  position: relative;
+}
+.buttonDisLike img, .buttonLike img {
+  width: 32px;
+  position: absolute;
+}
+.buttonDisLike img {
+  left: 28px;
+}
+.buttonLike img {
+  right: 28px;
+}
+.buttonDisLike span, .buttonLike span {
+  color: var(--mainWhite);
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+.buttonDisLike span {
+  margin-left: 50px;
+}
+.buttonLike span {
+  margin-right: 50px;
+}
+.buttonDisLike {
+  margin-right: 2px;
+  background-color: var(--mainRed);
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+}
+.buttonLike {
+  background-color: var(--mainGreen);
+  border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+}
