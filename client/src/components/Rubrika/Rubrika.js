@@ -19,7 +19,7 @@ const Rubrika = ({ filterTodos, onFilterDone }) => {
           </li>
   }) 
   const liArrFilter = filterTodos.filter((item) => item.active).map((item) => {
-    return <li className="filterDone-item">
+    return <li key={item.id} className="filterDone-item">
             {item.title}
           </li>
   })

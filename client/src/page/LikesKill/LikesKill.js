@@ -5,15 +5,23 @@ import ShowVideo from '../../components/ShowVideo';
 import './LikesKill.css';
 //https://www.youtube.com/watch?v=8eZJ9Sinnxg
 //https://youtu.be/8eZJ9Sinnxg
+// https://www.youtube.com/watch?v=NHLh_CCQlYs
+// https://youtu.be/NHLh_CCQlYs
 class LikesKill extends React.Component {
   state = {
     filterData: [
-      // { id: 0, title: "Все", active: false },
+      { id: 0, title: "Все", active: false },
       { id: 1, title: "Дриблинг", active: false },
       { id: 2, title: "Удары", active: false },
       { id: 3, title: "Фристайл", active: false },
       { id: 4, title: `"Я-Судья"`, active: false },
       { id: 5, title: "Другое", active: false }
+    ],
+    video: [
+      { id: 0, videoId: "8eZJ9Sinnxg", right: false, left: false, like: 541, disLike: 98, type: "fristail" },
+      { id: 1, videoId: "3hRS4Z57TtQ", right: false, left: false, like: 5, disLike: 988, type: "sud" },
+      { id: 2, videoId: "NHLh_CCQlYs", right: false, left: false, like: 400, disLike: 55, type: "fristail" },
+      { id: 3, videoId: "NHLh_CCQlYs", right: false, left: false, like: 400, disLike: 55, type: "fristail" },
     ]
   }
   onFilterDone = (id) => {
@@ -31,12 +39,82 @@ class LikesKill extends React.Component {
       };
     })
   }
-
+  disLikeHandler = (id) => {
+    this.setState(({ video }) => {
+      const idx = video.findIndex((el) => el.id === id);
+      const oldItem = video[idx];
+      const newItem = { ...oldItem, left: !oldItem.left, disLike: oldItem.disLike + 1 };
+      const newArray = [ 
+        ...video.slice(0, idx),
+        newItem,
+        ...video.slice(idx + 1)
+      ];
+      return {
+        video: newArray
+      }
+    })
+  }
+  likeHandler = (id) => {
+    this.setState(({ video }) => {
+      const idx = video.findIndex((el) => el.id === id);
+      const oldItem = video[idx];
+      const newItem = { ...oldItem, right: !oldItem.right, like: oldItem.like + 1 };
+      const newArray = [ 
+        ...video.slice(0, idx),
+        newItem,
+        ...video.slice(idx + 1)
+      ];
+      return {
+        video: newArray
+      }
+    })
+  }
+  deleteItem = (id) => {
+      this.setState(({video})=>{
+        const idx = video.findIndex((el)=>el.id===id);
+        const newArray = [ 
+          ...video.slice(0, idx),
+          ...video.slice(idx + 1)
+        ];
+        
+        return {
+          video: newArray
+        };
+      })
+  };
+  mouse = (e) => {
+    console.log(e.clientX);
+  }
   render() {
+    const height = window.outerWidth > 500 ? "auto" : `${Math.round(window.outerWidth/1.875)}px`;
+    const width = window.outerWidth > 500 ? "100%" : `${Math.round(window.outerWidth*0.95)}px`;
+    const opts = {
+      // height: `${Math.round(window.outerWidth/1.875)}px`,
+      // width: `${Math.round(window.outerWidth*0.95)}px`,
+      height: height,
+      width: width,
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
+        autoplay: 0,
+        controls: 0,
+        // showinfo: 0,
+        // iv_load_policy: 3,
+        // rel: 0,
+        // showinfo: 0,
+        // modestbranding: 1
+      },
+    };
     return (
       <div className="likes_kill-container">
         <Rubrika filterTodos={this.state.filterData} onFilterDone={this.onFilterDone}/>
-        <ShowVideo />
+        <ShowVideo 
+          opts={opts} 
+          video={this.state.video} 
+          disLikeHandler={this.disLikeHandler} 
+          likeHandler={this.likeHandler}
+          deleteItem={this.deleteItem}
+          // mouse={this.mouse}
+        />
       </div>
     );
   }

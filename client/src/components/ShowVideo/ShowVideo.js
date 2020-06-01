@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import YouTube from 'react-youtube';
 
 import "./ShowVideo.css";
@@ -8,33 +8,33 @@ const videoOnReady = (event) => {
   event.target.playVideoAt(30);
   console.log(event.target)
 }
-
-const ShowVideo = () => {
-  const [disLike, setDisLike] = useState(98);
-  const [like, setLike] = useState(541);
-
-  const disLikeHandler = () => {
-    setDisLike(disLike+1);
-  }
-  const likeHandler = () => {
-    setLike(like+1);
-  }
-  const opts = {
-    // height: '100%',
-    width: '100%',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-      controls: 0,
-      showinfo: 0,
-      iv_load_policy: 3,
-      rel: 0,
-      showinfo: 0,
-      modestbranding: 1
-    },
-  };
-  return (
-    <div className="showVideo-container">
+const circumference = 2*Math.PI*25;
+const progress = (procent) => {
+  const offset = circumference - procent/100 * circumference;
+  return offset;
+};
+ 
+const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem, opts}) => {
+  // const [disLikeAction, setDisLikeAction] = useState(false)
+  const youtube =  video.map((item) => {
+    const ed = item.like + item.disLike;
+    const procent = Math.round(item.like/ed*100);
+    const twoActionLike = () => {
+      likeHandler(item.id)
+      // setTimeout(()=>{likeHandler(item.id)}, 500)
+      setTimeout(()=>{deleteItem(item.id)}, 1500)
+    }
+    const twoActionDisLile = () => {
+      // setDisLikeAction(!disLikeAction)
+      disLikeHandler(item.id)
+      // setTimeout(()=>{disLikeHandler(item.id)}, 500)
+      setTimeout(()=>{deleteItem(item.id)}, 1500)
+    }
+    return (
+      <div 
+        key={item.id} 
+        style={{transformOrigin: `${item.left ? "bottom left" : item.right ? "bottom right" : ""}`}}
+        className={`showVideo-container ${item.right ? "showVideo-container_likeDel" : item.left ? "showVideo-container_disLikeDel" : ""}`} >
       <div className="top_info">
         <div className="top_info-avatar">
           <img src="img/avatar.png" alt="avatar"/>
@@ -44,15 +44,30 @@ const ShowVideo = () => {
           <span className="top_info-title_fillName">Новиков Александр</span>
         </div>
       </div>
-      <YouTube videoId="8eZJ9Sinnxg" opts={opts} onReady={videoOnReady} />
+      <React.Fragment>
+        <YouTube videoId={item.videoId} opts={opts} onReady={videoOnReady} />
+        <div className="progress_bar">
+          <span className="procent">{procent}%</span>
+          <svg>
+            <circle className="circle" cx="25" cy="25" r="25"></circle>
+            <circle 
+              style={{ 
+                strokeDasharray: `${circumference} ${circumference}`,
+                strokeDashoffset: `${progress(procent)}` 
+              }} 
+              className="circle2" cx="25" cy="25" r="25"
+            ></circle>
+          </svg>
+        </div>
+      </React.Fragment>
       <ul className="infoBlock">
         <li>
           <img src="img/like.png" alt="like"/>
-          <span>{like}</span>
+          <span>{item.like}</span>
         </li>
         <li>
           <img src="img/kill.png" alt="kill"/>
-          <span>{disLike}</span>
+          <span>{item.disLike}</span>
         </li>
         <li>
           <img src="img/shares.png" alt="shares"/>
@@ -67,20 +82,22 @@ const ShowVideo = () => {
         </li>
       </ul>
       <div className="bottum_buttons-container">
-        <div 
-          className="buttonDisLike"
-          onClick={disLikeHandler}>
+        <div className="buttonDisLike" onClick={twoActionDisLile} >
           <img src="img/kill.png" alt="kill"/>
           <span>kill</span>
         </div>
-        <div 
-          className="buttonLike"
-          onClick={likeHandler}>
+        <div className="buttonLike" onClick={twoActionLike}>
           <span>like</span>
           <img src="img/like.png" alt="like"/>
         </div>
       </div>
     </div>
+          );
+  })
+  return (
+    <React.Fragment>
+      {youtube}
+    </React.Fragment>
   );
 };
 

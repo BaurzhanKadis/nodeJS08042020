@@ -54,6 +54,7 @@
 }
 .activeLiRubrica {
   background-color: var(--mainGreen);
+  color: var(--mainWhite);
 }
 .filterDone {
   margin: 0 0 0 5px;
