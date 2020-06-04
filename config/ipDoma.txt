@@ -3,3 +3,4 @@
  "port": 5000,
   "jwtSecret": "Test baur mern",
   "mongoUri": "mongodb+srv://Baurzhan:01081988baur@cluster0-q5vrg.azure.mongodb.net/app?retryWrites=true&w=majority"
+  "baseUrl": "http://localhost:5000"
