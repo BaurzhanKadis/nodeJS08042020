@@ -1,6 +1,6 @@
 {
-  "port": 5000,
-  "jwtSecret": "vladilen youtube mern",
-  "mongoUri": "mongodb+srv://vladilen:1234qwer@cluster0-kggc2.azure.mongodb.net/app?retryWrites=true&w=majority",
-  "baseUrl": "http://localhost:5000"
+  "port": 80,
+  "jwtSecret": "Test baur mern",
+  "mongoUri": "mongodb+srv://Baurzhan:01081988baur@cluster0-q5vrg.azure.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://bkadiskaliev.site.ru"
 }
