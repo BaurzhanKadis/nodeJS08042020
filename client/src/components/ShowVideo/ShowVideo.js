@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import YouTube from 'react-youtube';
 
 import "./ShowVideo.css";
@@ -91,13 +91,16 @@ const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem, opts}) => {
           <img src="img/like.png" alt="like"/>
         </div>
       </div>
+      <div className="sheres">
+        <span><img src="img/shares.png" alt="shares"/>Поделится</span>
+      </div>
     </div>
           );
   })
   return (
-    <React.Fragment>
+    <div style={{ overflow: "hidden", height: "75vh", position: "relative", width: "100%" }}>
       {youtube}
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -1,0 +1,18 @@
+.ShowVideoBM-wrapper .top_info {
+  border-top: 2px solid var(--mainWhite);
+}
+.ReactPlayer-wrapper {
+  width: 100%;
+  margin: 5px 0;
+}
+.ShowVideoBM-wrapper .infoBlock::after {
+  left: 0;
+  width: 100%;
+  background-color: var(--mainWhite)
+}
+.ShowVideoBM-wrapper .title {
+  font-family: var(--mainFontsGithic), sans-serif;
+  font-size: 17px;
+  padding: 10px;
+  color: var(--mainWhite)
+}

@@ -33,7 +33,7 @@ const NavBar = () => {
     {
       name: "Мой Блог",
       icon: <i className="fas fa-user userIcon"></i>,
-      href: "/search"
+      href: "/"
     },
     {
       name: "Биржа",
@@ -78,7 +78,7 @@ const NavBar = () => {
     {
       name: "Лучшие моменты",
       icon: <i className="fas fa-search"></i>,
-      href: "/"
+      href: "/best-moment"
     },
     {
       name: "Каталог блогера",
@@ -150,6 +150,9 @@ const NavBar = () => {
       break;
     case '/likes-kill':
       title = `"Likes kill"`;
+      break;
+    case '/best-moment':
+      title = 'Лучшие Моменты';
       break;
     default:
       title = "Главная";

@@ -21,6 +21,7 @@ body {
   --mainGrey: #434242;
   --mainRed: #E31E24;
   --mainFontsGithic: "centuryGothic";
+  --mainGreyLight: #727271;
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,900");
 /* code {
@@ -29,5 +30,5 @@ body {
 } */
 .wrapper {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
