@@ -100,7 +100,6 @@
   width: 50px;
   top: 7px;
   left: 7px;
-  z-index: 1000;
   overflow: initial!important;
 }
 .circle, .circle2 {
@@ -214,6 +213,20 @@
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
+}
+.sheres {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.sheres span img {
+  width: 20px;
+  margin-right: 10px;
+}
+.sheres span {
+  color: var(--mainWhite);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: var(--mainFontsGithic), sans-serif;
 }
 /* @media (max-width: 480px) {
   .showVideo-container {

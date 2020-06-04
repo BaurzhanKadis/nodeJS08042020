@@ -1,0 +1,35 @@
+.ParamsTypes-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--mainGreyLight);
+  padding: 10px;
+}
+.ParamsTypes-block {
+  cursor: pointer;
+}
+.ParamsTypes-block img {
+  width: 100px;
+  border: 1px solid white;
+  /* box-sizing: content-box; */
+}
+.ParamsTypes-block-active img {
+  border-top: 2px solid var(--mainGreen);
+  border-right: 2px solid var(--mainGreen);
+  border-left: 2px solid var(--mainGreen);
+}
+.ParamsTypes-block span {
+  display: block;
+  text-align: center;
+  color: var(--mainWhite);
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  background-color: var(--mainGrey);
+  border-bottom: 1px solid var(--mainWhite);
+  border-right: 1px solid var(--mainWhite);
+  border-left: 1px solid var(--mainWhite);
+}
+.ParamsTypes-block-active span {
+  border-bottom: 2px solid var(--mainGreen);
+  border-right: 2px solid var(--mainGreen);
+  border-left: 2px solid var(--mainGreen);
+}

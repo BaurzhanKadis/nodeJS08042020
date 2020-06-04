@@ -7,6 +7,9 @@ import './LikesKill.css';
 //https://youtu.be/8eZJ9Sinnxg
 // https://www.youtube.com/watch?v=NHLh_CCQlYs
 // https://youtu.be/NHLh_CCQlYs
+//https://youtu.be/Gt_G96isBlU
+//https://youtu.be/ZSKP5MWRxw4
+//https://youtu.be/GhfbPLgWS-g
 class LikesKill extends React.Component {
   state = {
     filterData: [
@@ -18,14 +21,19 @@ class LikesKill extends React.Component {
       { id: 5, title: "Другое", active: false }
     ],
     video: [
-      { id: 0, videoId: "8eZJ9Sinnxg", right: false, left: false, like: 541, disLike: 98, type: "fristail" },
-      { id: 1, videoId: "3hRS4Z57TtQ", right: false, left: false, like: 5, disLike: 988, type: "sud" },
-      { id: 2, videoId: "NHLh_CCQlYs", right: false, left: false, like: 400, disLike: 55, type: "fristail" },
-      { id: 3, videoId: "NHLh_CCQlYs", right: false, left: false, like: 400, disLike: 55, type: "fristail" },
+      { id: 0, videoId: "8eZJ9Sinnxg", right: false, left: false, like: 541, disLike: 98, type: "freestyle" },
+      { id: 1, videoId: "3hRS4Z57TtQ", right: false, left: false, like: 5, disLike: 988, type: "judge" },
+      { id: 2, videoId: "ZSKP5MWRxw4", right: false, left: false, like: 5, disLike: 988, type: "judge" },
+      { id: 3, videoId: "ezYEBgg-WUA", right: false, left: false, like: 5, disLike: 988, type: "dribbling" },
+      { id: 4, videoId: "GhfbPLgWS-g", right: false, left: false, like: 5, disLike: 988, type: "dribbling" },
+      { id: 5, videoId: "NHLh_CCQlYs", right: false, left: false, like: 400, disLike: 55, type: "freestyle" },
+      { id: 6, videoId: "pnD7A95jNXE", right: false, left: false, like: 400, disLike: 55, type: "freestyle" },
+      { id: 7, videoId: "vQ-Z-3wUDu8", right: false, left: false, like: 400, disLike: 55, type: "hits" },
+      { id: 8, videoId: "Gt_G96isBlU", right: false, left: false, like: 400, disLike: 55, type: "hits" },
     ]
   }
   onFilterDone = (id) => {
-    this.setState(({ filterData }) => {
+    this.setState(({ filterData, }) => {
       const idx = filterData.findIndex((el) => el.id === id);
       const oldItem = filterData[idx];
       const newItem = { ...oldItem, active: !oldItem.active };
@@ -85,7 +93,27 @@ class LikesKill extends React.Component {
   mouse = (e) => {
     console.log(e.clientX);
   }
+  filter = (items, filter) => {
+    const idx = filter.findIndex((el) => el.active === true);
+    // const itemzzz = filterData[idx];
+    switch(idx) {
+      case 0: 
+        return items;
+      case 1:
+        return items.filter((item) => item.type === "dribbling");
+      case 2:
+        return items.filter((item) => item.type === "hits");
+      case 3:
+        return items.filter((item) => item.type ==="freestyle");
+      case 4:
+        return items.filter((item) => item.type ==="judge");
+      default:
+        return items;      
+    }
+   };
   render() {
+    const visibleItems = this.filter(this.state.video, this.state.filterData);
+    // console.log("visibleItems",visibleItems)
     const height = window.outerWidth > 500 ? "auto" : `${Math.round(window.outerWidth/1.875)}px`;
     const width = window.outerWidth > 500 ? "100%" : `${Math.round(window.outerWidth*0.95)}px`;
     const opts = {
@@ -109,7 +137,8 @@ class LikesKill extends React.Component {
         <Rubrika filterTodos={this.state.filterData} onFilterDone={this.onFilterDone}/>
         <ShowVideo 
           opts={opts} 
-          video={this.state.video} 
+          video={visibleItems} 
+          // video={this.state.video} 
           disLikeHandler={this.disLikeHandler} 
           likeHandler={this.likeHandler}
           deleteItem={this.deleteItem}
