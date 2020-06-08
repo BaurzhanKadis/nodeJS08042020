@@ -1,0 +1,58 @@
+.BoxStructure-container {
+  margin: 10px;
+}
+.BoxStructure_title {
+  font-size: 14px;
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+
+}
+.BoxStructure_matrix {
+  margin: 0;
+  padding: 0;
+}
+.BoxStructure_matrix li {
+  display: grid;
+  grid-template-areas: "address address address"
+                       "people rating more";
+  grid-gap: 5px;
+}
+.BoxStructure_address {
+  grid-area: address;
+  font-size: 14px;
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+.BoxStructure_people {
+  grid-area: people;
+  background-color: var(--mainBlack);
+  text-align: center;
+}
+.BoxStructure_img {
+  height: 20px;
+}
+.BoxStructure_img img {
+  height: 100%;
+}
+.BoxStructure_people span {
+  display: block;
+  font-size: 14px;
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+.BoxStructure_rating {
+  grid-area: rating;
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+}
+.BoxStructure_more {
+  grid-area: more;
+  background-color: var(--mainGreen);
+  color: var(--mainWhite);
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  height: max-content;
+  cursor: pointer;
+}

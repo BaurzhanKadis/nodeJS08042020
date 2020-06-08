@@ -91,6 +91,11 @@ header {
   color: var(--mainWhite);
   padding: 0 7px;
 }
+.icon-item {
+  width: 30px;
+  color: var(--mainWhite);
+  margin: 0 7px;
+}
 .title_page {
   display: none;
   text-align: center;
@@ -219,7 +224,8 @@ header {
     padding: 5px 0;
   }
   .logo_img {
-    width: 80px;
+    width: 47px;
+    margin: 0 15px;
   }
   .title_page {
     display: block;
@@ -246,6 +252,7 @@ header {
 }
 @media (min-width: 400px) {
   .logo_img {
-    width: 65px;
+    width: 47px;
+    margin: 0 15px;
   }
 }

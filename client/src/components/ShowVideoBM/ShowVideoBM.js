@@ -16,7 +16,7 @@ const playHandler = (id) => {
             <img src="img/avatar.png" alt="avatar"/>
           </div>
           <div className="top_info-title">
-            <span className="top_info-title_nickName">world of dootbal</span>
+            <span className="top_info-title_nickName">world of football</span>
             <span className="top_info-title_fillName">Париж</span>
           </div>
         </div>

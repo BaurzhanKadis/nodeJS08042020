@@ -22,17 +22,17 @@ const NavBar = () => {
   const classProduct = [
     {
       name: "Главная",
-      icon: <i className="fas fa-home" />,
+      icon: <img className="icon-item" src="img/menu-home.png" alt="home" />,//<i className="fas fa-home" />
       href: "/"
     },
     {
       name: "Поиск",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/search.png" alt="search" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Мой Блог",
-      icon: <i className="fas fa-user userIcon"></i>,
+      icon: <img className="icon-item" src="img/user-icon.png" alt="user-icon" />,//<i className="fas fa-user userIcon"></i>,
       href: "/"
     },
     {
@@ -42,7 +42,7 @@ const NavBar = () => {
     },
     {
       name: "Лента публикаций",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/lenta.png" alt="lenta" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
@@ -52,22 +52,22 @@ const NavBar = () => {
     },
     {
       name: "Сообщения",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/message.png" alt="message" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Друзья",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/friend.png" alt="friend" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Мои команды",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/commanda.png" alt="commanda" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Онлайн-школы",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/online-school.png" alt="online-school" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
@@ -79,6 +79,11 @@ const NavBar = () => {
       name: "Лучшие моменты",
       icon: <i className="fas fa-search"></i>,
       href: "/best-moment"
+    },
+    {
+      name: "Коробка",
+      icon: <i className="fas fa-search"></i>,
+      href: "/box"
     },
     {
       name: "Каталог блогера",
@@ -154,12 +159,12 @@ const NavBar = () => {
     case '/best-moment':
       title = 'Лучшие Моменты';
       break;
+    case '/box':
+      title = `"Коробка"`;
+      break;
     default:
       title = "Главная";
   }
-  // console.log("isAuthenticated", auth);
-  console.log("title", title);
-  // console.log("history", history.location.pathname);
   return (
     <header>
         <nav className={menuActive ? "nav-bar active" : "nav-bar"} >
@@ -172,15 +177,15 @@ const NavBar = () => {
           {(title === "Главная") 
             ? 
             <div className="logo">
-              <img className="logo_img" src="img/logo.png" alt=""/>
+              <img className="logo_img" src="img/LSblack.png" alt="logo"/>
               <Link className="logo_title" to="/">
                 like skill
               </Link>
-              <img className="logo_img" src="img/logo.png" alt=""/>
+              {/* <img className="logo_img" src="img/LSblack.png" alt="logo"/> */}
             </div> 
             : null
           }
-          <nav className="nav">
+          {/* <nav className="nav">
             <ul>
               <li className="nav-item"><a href="#">work</a></li>
               <li className="nav-item"><a href="#">service</a></li>
@@ -188,7 +193,7 @@ const NavBar = () => {
               <li className="nav-item"><a href="#">blog</a></li>
               <li className="nav-item"><a href="#">contact</a></li>
             </ul>
-          </nav>
+          </nav> */}
           <div className="title_page">
             <span>{title}</span>
           </div>

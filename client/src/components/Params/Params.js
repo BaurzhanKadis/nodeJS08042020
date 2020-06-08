@@ -15,9 +15,9 @@ const Params = ({ smallUsers, bigUsers }) => {
         onClick={bigUsers}>
         <span>Игроки от 12 лет</span>
       </div>
-      <div className="params_block">
+      {/* <div className="params_block">
         <span>Вакансии</span>
-      </div>
+      </div> */}
     </div>
   );
 };

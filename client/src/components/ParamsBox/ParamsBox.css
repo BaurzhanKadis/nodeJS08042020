@@ -1,0 +1,123 @@
+.ParamsBox-container {
+  display: grid;
+  grid-template-areas: "paramBox_img form_box form_box form_box add_box"
+                       "title_paramBox title_paramBox title_paramBox how-work how-work";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+  align-items:center;
+  margin-top: 10px;
+}
+.paramBox_img {
+  grid-area: paramBox_img;
+  width: 35px;
+  margin: 0 auto;
+}
+.paramBox_form {
+  grid-area: form_box;
+  position: relative;
+}
+.paramBox-input {
+  width: 100%;
+  outline-style: none;
+  border: none;
+  padding: 7px 20px 7px 5px;
+}
+.paramBox_form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--mainBlack);
+  border: none;
+  width: 43px;;
+}
+.paramBox_form button img {
+  width: 100%;
+}
+.add_box {
+  grid-area: add_box;
+  background-color: var(--mainGreen);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+.add_box::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  top: 7px;
+  left: 17px;
+  background-color: var(--mainWhite)
+}
+.add_box::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 16px;
+  left: 8px;
+  background-color: var(--mainWhite)
+}
+.title_paramBox {
+  grid-area: title_paramBox;
+  justify-self: start;
+  color: var(--mainWhite);
+  font-size: 12px;
+  margin-left: 15px;
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+.title_paramBox span {
+  font-style: italic;
+  font-size: 11px;
+  text-decoration: underline;
+}
+.close-title_paramBox {
+  position: relative;
+  top: 0px;
+  display: inline-block;
+  right: 0px;
+  width: 12px;
+  border-radius: 50%;
+  height: 12px;
+  background-color: #ccc;
+}
+.close-title_paramBox::before {
+  position: absolute;
+  background-color: var(--mainWhite);
+  content: "";
+  width: 1px;
+  height: 10px;
+  top: 1px;
+  right: 6px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.close-title_paramBox::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  top: 5px;
+  left: 1px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  background-color: var(--mainWhite);
+}
+.how-work {
+  grid-area: how-work;
+  margin-right: 5px;
+  justify-self: end;
+  color: var(--mainWhite);
+  font-size: 12px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  text-decoration: underline;
+}
