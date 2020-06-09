@@ -19,7 +19,7 @@
   -ms-transition: 0.45s;
   -o-transition: 0.45s;
 }
-.params_block:hover {
+.params_block-active {
   border-color: var(--mainGreen);
 }
 .params_block span {
@@ -29,4 +29,69 @@
   width: 70px;
   font-family: var(--mainFontsGithic), sans-serif;
   text-align: center;
+}
+.params_block-male span {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.params_block-check {
+  position: relative;
+  top: 2px;
+  width: 44px;
+  height: 15px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 10px;
+  background-color: #101010;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  box-shadow: 0 0 0 4px #101010;
+}
+.params_block-toggle {
+  top: -1px;
+  left: 0;
+  position: absolute;
+  width: 24px;
+  height: 17px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  background: #333;
+  box-shadow: inset 0 -20px 15px #292929,
+              inset 0 20px 15px #292929;
+}
+.activeToggle  {
+  left: 20px;
+}
+.params_block-w {
+  color: #f00;
+  text-shadow: 0 0 5px #f00,
+              0 0 10px #f00,
+              0 0 20px #f00,
+              0 0 40px #f00,
+              0 0 80px #f00;
+}
+.not-w {
+  color: #101010;
+  text-shadow: none;
+}
+.params_block-m {
+  color: #101010;
+  text-shadow: none;
+}
+.yes-m {
+  color: var(--mainGreen);
+  text-shadow: 0 0 5px var(--mainGreen),
+              0 0 10px var(--mainGreen),
+              0 0 20px var(--mainGreen),
+              0 0 40px var(--mainGreen),
+              0 0 80px var(--mainGreen);
 }

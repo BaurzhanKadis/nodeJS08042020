@@ -11,7 +11,7 @@ const BoxStructure = ({ pole }) => {
           return (
             <li key={id}>
               <div className="BoxStructure_address">
-                {id}. г. {item.city} {item.address}
+                {id} г. {item.city} {item.address}
               </div>
               <div className="BoxStructure_people">
                 <span className="BoxStructure_img">
