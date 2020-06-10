@@ -1,0 +1,101 @@
+.ParamsOnlineSchool-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--mainGreyLight);
+  padding: 10px;
+  margin: 0;
+}
+.ParamsOnlineSchool-block {
+  cursor: pointer;
+  width: 125px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.ParamsOnlineSchool-block img {
+  width: 100%;
+  border: 1px solid white;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.ParamsOnlineSchool-block-active img {
+  border-top: 2px solid var(--mainGreen);
+  border-right: 2px solid var(--mainGreen);
+  border-left: 2px solid var(--mainGreen);
+}
+.ParamsOnlineSchool-block span {
+  display: block;
+  text-align: center;
+  color: var(--mainWhite);
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  background-color: var(--mainGrey);
+  border-bottom: 1px solid var(--mainWhite);
+  border-right: 1px solid var(--mainWhite);
+  border-left: 1px solid var(--mainWhite);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.ParamsOnlineSchool-block-active span {
+  border-bottom: 2px solid var(--mainGreen);
+  border-right: 2px solid var(--mainGreen);
+  border-left: 2px solid var(--mainGreen);
+}
+.lessonNavi {
+  color: var(--mainWhite);
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  padding: 10px;
+  background-color: var(--mainBlack);
+  cursor: pointer;
+}
+.lessonNavi img {
+  width: 30px;
+  margin-right: 10px;
+}
+.list_itemsLessons {
+  background-color: var(--mainGreyLight);
+  width: 100%;
+  overflow-x: scroll;
+  text-align: center;
+  height: 40px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.list_itemsLessons-active {
+  height: 0;
+}
+.lesson_items {
+  margin: 0;
+  padding: 5px;
+}
+.lesson_item {
+  list-style: none;
+  padding: 0 10px;
+  display: inline-block;
+}
+.lesson_item a {
+  color: var(--mainWhite)!important;
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+
+@media (max-width: 400px) {
+  .ParamsOnlineSchool-block {
+    width: 100px;
+  }
+  .ParamsOnlineSchool-block span {
+    font-size: 12px;
+  }
+}

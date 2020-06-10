@@ -10,6 +10,7 @@ import StockMarket from './page/StockMarket';
 import LikesKill from './page/LikesKill';
 import BestMoment from './page/BestMoment';
 import Box from './page/Box';
+import OnlineSchool from './page/OnlineSchool';
 
 import './index.css';
 
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/likes-kill" component={LikesKill} />
         <Route exact path="/best-moment" component={BestMoment} />
         <Route exact path="/box" component={Box} />
+        <Route exact path="/online-school" component={OnlineSchool} />
         {isAuthenticated ? <Redirect to="/primary" /> : null }
       </div>
     </AuthContext.Provider>

@@ -1,5 +1,6 @@
 .likes_kill-container {
   /* background-color: var(--mainGrey); */
   position: relative;
+  overflow: hidden;
   /* padding: 10px; */
 }

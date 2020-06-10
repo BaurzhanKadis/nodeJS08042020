@@ -98,7 +98,7 @@ const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem, opts}) => {
           );
   })
   return (
-    <div style={{ overflow: "hidden", height: "75vh", position: "relative", width: "100%" }}>
+    <div style={{ overflow: "hidden", height: "100vh", position: "relative", width: "100%" }}>
       {youtube}
     </div>
   );

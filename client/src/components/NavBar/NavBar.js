@@ -68,7 +68,7 @@ const NavBar = () => {
     {
       name: "Онлайн-школы",
       icon: <img className="icon-item" src="img/online-school.png" alt="online-school" />,//<i className="fas fa-search"></i>,
-      href: "/"
+      href: "/online-school"
     },
     {
       name: "Челленджи",
@@ -161,6 +161,9 @@ const NavBar = () => {
       break;
     case '/box':
       title = `"Коробка"`;
+      break;
+    case '/online-school':
+      title = "Онлайн-школа";
       break;
     default:
       title = "Главная";

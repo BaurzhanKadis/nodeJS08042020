@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactPlayer from 'react-player';
 
 import './ShowVideoBM.css';
 
 const ShowVideoBM = ({ video }) => {
-  const [ active, setActive ] = useState(false)
-const playHandler = (id) => {
-  console.log("id", id)
-}
+//   const [ active, setActive ] = useState(false)
+// const playHandler = (id) => {
+//   console.log("id", id)
+// }
   const videoBM = video.map((item) => {
     return (
       <div className="ShowVideoBM-wrapper">

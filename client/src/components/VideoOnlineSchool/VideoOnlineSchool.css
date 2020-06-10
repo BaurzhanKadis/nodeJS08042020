@@ -1,0 +1,9 @@
+.top_infoLesson {
+  padding: 10px 10px;
+  color: var(--mainWhite);
+  font-size: 16px;
+  font-family: var(--mainFontsGithic), sans-serif;
+}
+.top_infoLesson span {
+  text-decoration: underline;
+} 

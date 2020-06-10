@@ -1,21 +1,38 @@
 .rubrika-container {
-  width: 100%;
-  height: 35px;
-  overflow: hidden;
-  padding: 0 20px;
+  width: 98%;
+  /*height: 35px;
+  *//*overflow: hidden;
+  */padding: 5px 10px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  top: 480px;
+  z-index: 2;
+  position: absolute;
+  background-color: var(--mainBlack);
+  border-radius: 10px;
+  margin: 5px;
+  left: 100%;
+}
+.rubrika-container-active {
+  /* height: 68px; */
+  left: 0;
+}
+.rubrika-link {
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+  left: -40px;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
-.rubrika-container-active {
-  height: 68px;
-}
-.rubrika-link {
-  position: relative;
-  top: 3px;
-  cursor: pointer;
+.rubrika-link-Active {
+  left: 0;
 }
 .rubrika-link i {
   font-size: 25px;
@@ -70,10 +87,10 @@
 }
 @media (max-width: 400px) {
   .rubrika-container {
-    height: 26px;
+    /* height: 26px; */
   }
   .rubrika-container-active {
-    height: 57px;
+    /* height: 57px; */
   }
   .filterDone-item {
     font-size: 8px;
@@ -81,7 +98,7 @@
 }
 @media (max-width: 450px) {
   .rubrika-link span {
-    padding-left: 17px;
+    padding-left: 30px;
     font-size: 15px;
   }
   .rubrika-link i {

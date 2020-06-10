@@ -26,7 +26,7 @@ const Rubrika = ({ filterTodos, onFilterDone }) => {
   return (
     <div className={`rubrika-container  ${active ? activeUlContainer : ""}`}>
       <span 
-        className="rubrika-link" 
+        className={`rubrika-link ${active ? "rubrika-link-Active" : "" }`} 
         onClick={rubrikaHandler}>
         <i className="fas fa-indent"></i>
         <span>Рубрика</span>
