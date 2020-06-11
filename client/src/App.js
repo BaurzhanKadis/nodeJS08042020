@@ -11,9 +11,9 @@ import LikesKill from './page/LikesKill';
 import BestMoment from './page/BestMoment';
 import Box from './page/Box';
 import OnlineSchool from './page/OnlineSchool';
+import Challenge from './page/Challenge';
 
 import './index.css';
-
 
 function App() {
   const { login, logout, token, userId, userNickName } = useAuth();
@@ -30,6 +30,7 @@ function App() {
         <Route exact path="/best-moment" component={BestMoment} />
         <Route exact path="/box" component={Box} />
         <Route exact path="/online-school" component={OnlineSchool} />
+        <Route exact path="/challenge" component={Challenge} />
         {isAuthenticated ? <Redirect to="/primary" /> : null }
       </div>
     </AuthContext.Provider>

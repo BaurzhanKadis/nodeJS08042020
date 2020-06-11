@@ -37,7 +37,7 @@ const NavBar = () => {
     },
     {
       name: "Биржа",
-      icon: <i className="fas fa-comments-dollar"></i>,
+      icon: <img className="icon-item" src="img/birzh.png" alt="birzh" />,//<i className="fas fa-comments-dollar"></i>,
       href: "/stock-market"
     },
     {
@@ -72,12 +72,12 @@ const NavBar = () => {
     },
     {
       name: "Челленджи",
-      icon: <i className="fas fa-search"></i>,
-      href: "/"
+      icon: <img className="icon-item" src="img/challenge.png" alt="challenge" />,//<i className="fas fa-search"></i>,
+      href: "/challenge"
     },
     {
       name: "Лучшие моменты",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/best.png" alt="best" />,//<i className="fas fa-search"></i>,
       href: "/best-moment"
     },
     {
@@ -87,17 +87,17 @@ const NavBar = () => {
     },
     {
       name: "Каталог блогера",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/blog.png" alt="blog" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Чаты",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/chat.png" alt="chat" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Новости футбола",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/newsFotball.png" alt="newsFotball" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
@@ -112,7 +112,7 @@ const NavBar = () => {
     },
     {
       name: "Магазин",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/shop.png" alt="shop" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
@@ -164,6 +164,9 @@ const NavBar = () => {
       break;
     case '/online-school':
       title = "Онлайн-школа";
+      break;
+    case '/challenge': 
+      title = "Челленджи";
       break;
     default:
       title = "Главная";

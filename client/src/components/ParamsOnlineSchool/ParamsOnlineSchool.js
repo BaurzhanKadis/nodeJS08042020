@@ -6,28 +6,11 @@ import "./ParamsOnlineSchool.css";
 const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange }) => {
   const [ activeNavi, setActiveNavi ] = useState(true);
   const widthItemsMidle = 100//средняя ширина блока "lesson_item" 
-  // const lip = lesson;
-  // console.log(lesson.length);
-  // console.log(lip[2]);
   const naviHandler = () => {
     setActiveNavi(!activeNavi) 
   }
   return (
     <React.Fragment>
-      {/* <div className="ParamsOnlineSchool-container">
-        <div className="ParamsOnlineSchool-block">
-          <img src="img/goll.png" alt="goll" />
-          <span>Финты</span>
-        </div>
-        <div className="ParamsOnlineSchool-block">
-          <img src="img/drill.png" alt="drill" />
-          <span>Развите техники</span>
-        </div>
-        <div className="ParamsOnlineSchool-block">
-          <img src="img/combo.png" alt="combo" />
-          <span>ОФП</span>
-        </div>
-      </div> */}
       <ul className="ParamsOnlineSchool-container">
         {itemTeam.map((item) => {
           return (
