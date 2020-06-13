@@ -1,0 +1,27 @@
+.Summary_records {
+  margin: 10px 5px;
+  padding: 0;
+}
+.Summary_records li {
+  list-style: none;
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+  font-size: 14px;
+}
+.Summary_records li:nth-child(1) {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.Summary_records li:nth-child(1)::after {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--mainGreen);
+}
+.Summary_records li span {
+  color: var(--mainGreen);
+}

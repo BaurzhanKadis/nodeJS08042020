@@ -1,3 +1,6 @@
+.VideoChallenge_itemContainer {
+  border-top: 1px solid var(--mainWhite);
+}
 .VideoChallenge-container .top_info-avatar {
   height: 50px;
 }
@@ -75,8 +78,8 @@
   -o-transform: translateY(-15px);
 }
 .VideoChallenge-container .infoBlock::after {
-  left: 0;
-  width: 100%;
+  left: 8px;
+  width: 95%;
   background-color: var(--mainWhite)
 }
 .VideoChallenge-container .title {

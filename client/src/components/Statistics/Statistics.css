@@ -1,0 +1,76 @@
+.Statistics_params {
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+  font-size: 14px;
+  margin: 10px 10px;
+}
+.Statistics_params-item {
+  width: 110px;
+  padding: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  text-align: center;
+}
+.Statistics_params .Statistics_params-item:nth-child(1) {
+  border: 1px solid var(--mainWhite);
+  background-color: var(--mainGreyLight);
+}
+.Statistics_params .Statistics_params-item:nth-child(2) {
+  background-color: var(--mainGreen);
+  text-align: start;
+  position: relative;
+}
+.Statistics_params-item:nth-child(2)::after {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  content: "▼";
+}
+.Statistics-container {
+  background-color: var(--mainWhite);
+  position: relative;
+}
+.Statistics-container h5 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.recharts-legend-wrapper,
+.recharts-default-legend {
+  width: 114px !important;
+  display: inline-block !important;
+  right: 0 !important;
+  left: auto !important;
+  text-align: left !important;
+  font-size: 10px;
+}
+.recharts-default-legend .recharts-legend-item {
+  display: block !important;
+}
+.recharts-default-legend .recharts-legend-item .recharts-surface {
+  width: auto !important;
+}
+.Statistics-tablo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+.Statistics-tablo_item {
+  display: grid;
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+  justify-items: center;
+  width: 30%;
+  border: 1px solid var(--mainWhite);
+}
+.Statistics-tablo_item span:nth-child(1) {
+  font-size: 14px;
+}
+.Statistics-tablo_item span:nth-child(2) {
+  font-size: 26px;
+  border-top: 1px solid var(--mainWhite);
+  width: 100%;
+  font-weight: 900;
+  text-align: center;
+}

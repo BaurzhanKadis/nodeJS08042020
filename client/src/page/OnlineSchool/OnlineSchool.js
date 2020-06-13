@@ -9,10 +9,10 @@ class OnlineSchool extends Component {
     lesson: [
       { id: 1, name: "On-line школа зенита", url: "video/OnlineSchool/1.mp4" },
       { id: 2, name: "Тренировка с юношеской сборной!", url: "video/OnlineSchool/2.mp4" },
-      { id: 3, name: "On-line школа зенита", url: "video/OnlineSchool/1.mp4" },
-      { id: 4, name: "Тренировка с юношеской сборной!", url: "video/OnlineSchool/2.mp4" },
-      { id: 5, name: "On-line школа зенита", url: "video/OnlineSchool/1.mp4" },
-      { id: 6, name: "Тренировка с юношеской сборной!", url: "video/OnlineSchool/2.mp4" },
+      { id: 3, name: "Школа Вратарей имени Спирякова", url: "video/OnlineSchool/3.mp4" },
+      { id: 4, name: "Школа Живой футбол. Обучение сильному удару.", url: "video/OnlineSchool/4.mp4" },
+      { id: 5, name: "Школа профи футбол. Урок 1 Финты", url: "video/OnlineSchool/5.mp4" },
+      { id: 6, name: "Школа Футхакера. Урок 1 Финты", url: "video/OnlineSchool/6.mp4" },
     ],
     itemTeam: [
       {id: 1, url: "img/goll.png", name: "Финты", active: false, filterItem: "fint"},

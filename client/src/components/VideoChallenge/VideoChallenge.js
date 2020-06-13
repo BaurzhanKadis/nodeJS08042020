@@ -8,7 +8,7 @@ const VideoChallenge = ({ challenge }) => {
     <div className="VideoChallenge-container">
       {challenge.map((item) => {
         return (
-          <div key={item.id}>
+          <div key={item.id} className="VideoChallenge_itemContainer">
 
             <div className="top_info">
               <div className="top_info-avatar">

@@ -12,6 +12,7 @@ import BestMoment from './page/BestMoment';
 import Box from './page/Box';
 import OnlineSchool from './page/OnlineSchool';
 import Challenge from './page/Challenge';
+import Diary from './page/Diary';
 
 import './index.css';
 
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/box" component={Box} />
         <Route exact path="/online-school" component={OnlineSchool} />
         <Route exact path="/challenge" component={Challenge} />
+        <Route exact path="/diary" component={Diary} />
         {isAuthenticated ? <Redirect to="/primary" /> : null }
       </div>
     </AuthContext.Provider>

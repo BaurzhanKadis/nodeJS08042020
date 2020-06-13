@@ -1,0 +1,50 @@
+.ParamDiary-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0;
+  background-color: var(--mainGrey);
+}
+.ParamDiary-block {
+  border: 2px solid var(--mainWhite);
+  width: 100px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  transition: 0.45s;
+  cursor: pointer;
+  -webkit-transition: 0.45s;
+  -moz-transition: 0.45s;
+  -ms-transition: 0.45s;
+  -o-transition: 0.45s;
+}
+.ParamDiary-block_active {
+  border-color: var(--mainGreen);
+}
+.ParamDiary-block span {
+  color: var(--mainWhite);
+  font-size: 14px;
+  display: block;
+  /* width: 70px; */
+  font-family: var(--mainFontsGithic), sans-serif;
+  text-align: center;
+}
+@media (max-width: 380px) {
+  .ParamDiary-block {
+    width: 85px;
+  }
+  .ParamDiary-block span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 350px) {
+  .ParamDiary-block {
+    width: 72px;
+  }
+  .ParamDiary-block span {
+    font-size: 12px;
+  }
+}

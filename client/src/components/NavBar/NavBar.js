@@ -81,8 +81,13 @@ const NavBar = () => {
       href: "/best-moment"
     },
     {
+      name: "Дневник",
+      icon: <img className="icon-item" src="img/dairy.png" alt="best" />,//<i className="fas fa-search"></i>,
+      href: "/diary"
+    },
+    {
       name: "Коробка",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/box.png" alt="best" />,//<i className="fas fa-search"></i>,
       href: "/box"
     },
     {
@@ -102,12 +107,12 @@ const NavBar = () => {
     },
     {
       name: "Рейтинги",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/reiting.png" alt="reiting" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Клубы",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/club.png" alt="club" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
@@ -117,22 +122,22 @@ const NavBar = () => {
     },
     {
       name: "Стримы",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/strim.png" alt="strim" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Статистика",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/statist.png" alt="statist" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Тех поддержка",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/support.png" alt="support" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
     {
       name: "Настройки",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/settings.png" alt="settings" />,//<i className="fas fa-search"></i>,
       href: "/"
     },
   ];
@@ -168,6 +173,9 @@ const NavBar = () => {
     case '/challenge': 
       title = "Челленджи";
       break;
+    case '/diary': 
+      title = "Дневник";
+      break;
     default:
       title = "Главная";
   }
@@ -176,7 +184,12 @@ const NavBar = () => {
         <nav className={menuActive ? "nav-bar active" : "nav-bar"} >
           <ul>
             {navBarMenu}
-            <li className="nav-bar-item"><Link to="/" onClick={logoutHandler}>Выйти</Link></li>
+            <li className="nav-bar-item">
+              <Link to="/" onClick={logoutHandler}>
+              <img className="icon-item" src="img/exit.png" alt="exit" />
+                Выйти
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="header">
