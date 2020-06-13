@@ -1,13 +1,8 @@
 import React from 'react';
-import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player';
 
 import "./ShowVideo.css";
 
-const videoOnReady = (event) => {
-  // access to player in all event handlers via event.target
-  event.target.playVideoAt(30);
-  console.log(event.target)
-}
 const circumference = 2*Math.PI*25;
 const progress = (procent) => {
   const offset = circumference - procent/100 * circumference;
@@ -45,7 +40,7 @@ const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem, opts}) => {
         </div>
       </div>
       <React.Fragment>
-        <YouTube videoId={item.videoId} opts={opts} onReady={videoOnReady} />
+      <ReactPlayer url="video/BestMomemt/goll/men/zenit.mp4" controls width='100%' height='100%'/>
         <div className="progress_bar">
           <span className="procent">{procent}%</span>
           <svg>

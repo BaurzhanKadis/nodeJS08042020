@@ -114,29 +114,29 @@ class LikesKill extends React.Component {
   render() {
     const visibleItems = this.filter(this.state.video, this.state.filterData);
     // console.log("visibleItems",visibleItems)
-    const height = window.outerWidth > 500 ? "auto" : `${Math.round(window.outerWidth/1.875)}px`;
-    const width = window.outerWidth > 500 ? "100%" : `${Math.round(window.outerWidth*0.95)}px`;
-    const opts = {
-      // height: `${Math.round(window.outerWidth/1.875)}px`,
-      // width: `${Math.round(window.outerWidth*0.95)}px`,
-      height: height,
-      width: width,
-      playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 0,
-        controls: 0,
-        // showinfo: 0,
-        // iv_load_policy: 3,
-        // rel: 0,
-        // showinfo: 0,
-        // modestbranding: 1
-      },
-    };
+    // const height = window.outerWidth > 500 ? "auto" : `${Math.round(window.outerWidth/1.875)}px`;
+    // const width = window.outerWidth > 500 ? "100%" : `${Math.round(window.outerWidth*0.95)}px`;
+    // const opts = {
+    //   // height: `${Math.round(window.outerWidth/1.875)}px`,
+    //   // width: `${Math.round(window.outerWidth*0.95)}px`,
+    //   height: height,
+    //   width: width,
+    //   playerVars: {
+    //     // https://developers.google.com/youtube/player_parameters
+    //     autoplay: 0,
+    //     controls: 0,
+    //     // showinfo: 0,
+    //     // iv_load_policy: 3,
+    //     // rel: 0,
+    //     // showinfo: 0,
+    //     // modestbranding: 1
+    //   },
+    // };
     return (
       <div className="likes_kill-container">
         <Rubrika filterTodos={this.state.filterData} onFilterDone={this.onFilterDone}/>
         <ShowVideo 
-          opts={opts} 
+          // opts={opts} 
           video={visibleItems} 
           // video={this.state.video} 
           disLikeHandler={this.disLikeHandler} 
