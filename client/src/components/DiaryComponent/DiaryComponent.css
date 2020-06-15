@@ -1,0 +1,92 @@
+.DiaryComponent-calendar {
+  background: var(--mainBlack);
+  padding: 10px;
+}
+.react-calendar {
+  width: 100% !important;
+  background-color: var(--mainGrey) !important;
+  color: var(--mainWhite) !important;
+}
+.react-calendar button {
+  position: relative;
+  text-align: left;
+  padding: 5px 5px 20px;
+  color: var(--mainWhite);
+}
+.trener_day {
+  background-color: var(--mainGreen) !important;
+}
+.trener_day-span {
+  font-size: 9px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  color: var(--mainWhite);
+  position: absolute;
+  top: 23px;
+  left: 2px;
+}
+.mysteel {
+  border: 1px solid var(--mainGreyLight) !important;
+}
+.play_day-span {
+  position: absolute;
+  width: 20px;
+  left: 26px;
+}
+.play_day-span img {
+  width: 100%;
+}
+.DiaryComponent-member {
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  color: var(--mainWhite);
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+}
+.DiaryComponent-member span {
+  display: inline-block;
+  position: relative;
+}
+.DiaryComponent-member span::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  top: 23px;
+  left: 0;
+  background-color: var(--mainGreen);
+}
+.DiaryComponent-member img {
+  width: 25px;
+}
+.DiaryComponent-ul {
+  padding: 0 13px;
+  margin: 0;
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  color: var(--mainWhite);
+}
+.DiaryComponent-ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid;
+  padding: 8px;
+}
+.DiaryComponent-add_event {
+  text-align: center;
+  margin: 20px;
+}
+.DiaryComponent-add_event span {
+  font-size: 14px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  color: var(--mainWhite);
+  background-color: var(--mainGreen);
+  padding: 8px 10px;
+}
+@media (max-width: 400px) {
+  .trener_day-span {
+    font-size: 8px;
+  }
+}

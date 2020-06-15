@@ -40,7 +40,7 @@ const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem, opts}) => {
         </div>
       </div>
       <React.Fragment>
-      <ReactPlayer url="video/BestMomemt/goll/men/zenit.mp4" controls width='100%' height='100%'/>
+      <ReactPlayer url={item.videoUrl} controls width='100%' height='400px'/>
         <div className="progress_bar">
           <span className="procent">{procent}%</span>
           <svg>

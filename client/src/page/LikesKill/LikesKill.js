@@ -3,13 +3,7 @@ import Rubrika from '../../components/Rubrika';
 import ShowVideo from '../../components/ShowVideo';
 
 import './LikesKill.css';
-//https://www.youtube.com/watch?v=8eZJ9Sinnxg
-//https://youtu.be/8eZJ9Sinnxg
-// https://www.youtube.com/watch?v=NHLh_CCQlYs
-// https://youtu.be/NHLh_CCQlYs
-//https://youtu.be/Gt_G96isBlU
-//https://youtu.be/ZSKP5MWRxw4
-//https://youtu.be/GhfbPLgWS-g
+
 class LikesKill extends React.Component {
   state = {
     filterData: [
@@ -21,15 +15,15 @@ class LikesKill extends React.Component {
       { id: 5, title: "Другое", active: false }
     ],
     video: [
-      { id: 0, videoId: "8eZJ9Sinnxg", right: false, left: false, like: 541, disLike: 98, type: "freestyle" },
-      { id: 1, videoId: "3hRS4Z57TtQ", right: false, left: false, like: 5, disLike: 988, type: "judge" },
-      { id: 2, videoId: "ZSKP5MWRxw4", right: false, left: false, like: 5, disLike: 988, type: "judge" },
-      { id: 3, videoId: "ezYEBgg-WUA", right: false, left: false, like: 5, disLike: 988, type: "dribbling" },
-      { id: 4, videoId: "GhfbPLgWS-g", right: false, left: false, like: 5, disLike: 988, type: "dribbling" },
-      { id: 5, videoId: "NHLh_CCQlYs", right: false, left: false, like: 400, disLike: 55, type: "freestyle" },
-      { id: 6, videoId: "pnD7A95jNXE", right: false, left: false, like: 400, disLike: 55, type: "freestyle" },
-      { id: 7, videoId: "vQ-Z-3wUDu8", right: false, left: false, like: 400, disLike: 55, type: "hits" },
-      { id: 8, videoId: "Gt_G96isBlU", right: false, left: false, like: 400, disLike: 55, type: "hits" },
+      { id: 0, videoUrl: "video/LikesKill/lk1.mp4", right: false, left: false, like: 541, disLike: 98, type: "freestyle" },
+      { id: 1, videoUrl: "video/LikesKill/lk2.mp4", right: false, left: false, like: 5, disLike: 988, type: "judge" },
+      { id: 2, videoUrl: "video/LikesKill/lk3.mp4", right: false, left: false, like: 5, disLike: 988, type: "judge" },
+      { id: 3, videoUrl: "video/LikesKill/lk4.mp4", right: false, left: false, like: 5, disLike: 988, type: "dribbling" },
+      { id: 4, videoUrl: "video/LikesKill/lk5.mp4", right: false, left: false, like: 5, disLike: 988, type: "dribbling" },
+      { id: 5, videoUrl: "video/LikesKill/lk6.mp4", right: false, left: false, like: 400, disLike: 55, type: "freestyle" },
+      { id: 6, videoUrl: "video/LikesKill/lk7.mp4", right: false, left: false, like: 400, disLike: 55, type: "freestyle" },
+      { id: 7, videoUrl: "video/LikesKill/lk8.mp4", right: false, left: false, like: 400, disLike: 55, type: "hits" },
+      { id: 8, videoUrl: "video/LikesKill/lk9.mp4", right: false, left: false, like: 400, disLike: 55, type: "hits" },
     ]
   }
   onFilterDone = (id) => {

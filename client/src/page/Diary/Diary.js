@@ -15,8 +15,12 @@ class Diary extends Component {
       { name: "Статистика", active: false, itemEl: "statistics"},
       { name: "Календарь", active: false, itemEl: "diary"},
     ],
-    filter: "summary"
+    filter: "summary",
+    date: new Date(),
   }
+  
+  onChange = date => this.setState({ date })
+
   onFilterChange = (filter) => {
     this.setState({ filter });
   }
@@ -29,7 +33,7 @@ class Diary extends Component {
       case 'statistics':
         return <Statistics />;
       case 'diary':
-        return <DiaryComponent />;
+        return <DiaryComponent onChange={this.onChange} value={this.state.date}/>;
       default:
         return <Summary />;      
     }
