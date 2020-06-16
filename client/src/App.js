@@ -6,6 +6,7 @@ import { useAuth } from "./hooks/auth.hook";
 import Auth from "./page/Auth";
 import Primary from "./page/Primary";
 import NavBar from './components/NavBar';
+import BottumMenu from './components/Bottum-menu';
 import StockMarket from './page/StockMarket';
 import LikesKill from './page/LikesKill';
 import BestMoment from './page/BestMoment';
@@ -17,12 +18,12 @@ import Diary from './page/Diary';
 import './index.css';
 
 function App() {
-  const { login, logout, token, userId, userNickName } = useAuth();
+  const { login, logout, token, userId, userNickName, menuActive, setMenuActive, menuHandler } = useAuth();
   const isAuthenticated = !!token;
-  // const isAuthenticated = false;
+
   return (
-    <AuthContext.Provider value={{ login, logout, token, userId, userNickName }}>
-      <div className="wrapper">
+    <AuthContext.Provider value={{ login, logout, token, userId, userNickName, setMenuActive, menuActive, menuHandler }}>
+      <div className={`wrapper ${menuActive ? "overflowHidden" : ""}`}>
         <NavBar />
         <Route exact path={[ "/login", "/register"]} component={Auth} />
         <Route exact path={[ "/", "/primary"]} component={Primary} />
@@ -34,6 +35,7 @@ function App() {
         <Route exact path="/challenge" component={Challenge} />
         <Route exact path="/diary" component={Diary} />
         {isAuthenticated ? <Redirect to="/primary" /> : null }
+        <BottumMenu />
       </div>
     </AuthContext.Provider>
   );

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import './Primary.css';
+import "./Primary.css";
 
 class Primary extends Component {
   render() {
@@ -12,8 +12,16 @@ class Primary extends Component {
           <p className="sale_title">
             <span>Новая колекция уже в продаже!</span>
           </p>
-          <img src="img/title.png" alt=""/>
-          <Link className="banner_link" to="/shop">В магазин</Link>
+          <img src="img/title.png" alt="" />
+          <Link className="banner_link" 
+                // to="/shop"
+                to="/"
+                >
+            В магазин
+          </Link>
+        </section>
+        <section className="sect_BM">
+          
         </section>
       </main>
     );

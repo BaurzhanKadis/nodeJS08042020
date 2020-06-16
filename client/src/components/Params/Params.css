@@ -39,12 +39,12 @@
 }
 .params_block-check {
   position: relative;
-  top: 2px;
+  top: 3px;
   width: 44px;
   height: 15px;
   display: inline-block;
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 14px;
   background-color: #101010;
   border-radius: 40px;
   -webkit-border-radius: 40px;
@@ -72,12 +72,14 @@
   left: 20px;
 }
 .params_block-w {
-  color: #f00;
-  text-shadow: 0 0 5px #f00,
-              0 0 10px #f00,
-              0 0 20px #f00,
-              0 0 40px #f00,
-              0 0 80px #f00;
+  display: inline-block;
+  transform: scale(1.5);
+  color: var(--mainGreen);
+  text-shadow: 0 0 5px var(--mainGreen),
+              0 0 10px var(--mainGreen),
+              0 0 20px var(--mainGreen),
+              0 0 40px var(--mainGreen),
+              0 0 80px var(--mainGreen);
 }
 .not-w {
   color: #101010;
@@ -88,6 +90,8 @@
   text-shadow: none;
 }
 .yes-m {
+  transform: scale(1.5);
+  display: inline-block;
   color: var(--mainGreen);
   text-shadow: 0 0 5px var(--mainGreen),
               0 0 10px var(--mainGreen),

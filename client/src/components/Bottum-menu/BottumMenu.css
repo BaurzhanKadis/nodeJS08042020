@@ -1,0 +1,49 @@
+.BottumMenu-container {
+  position: fixed;
+  z-index: 3;
+  bottom: -1px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--mainBlack);
+}
+.BottumMenuUl {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.BottumMenuLi-item {
+  list-style: none;
+  display: inline-block;
+  width: 40px;
+}
+.BottumMenuLi-item a {
+  position: relative;
+}
+.BottumMenuLi-item a img {
+  width: 100%;
+}
+.center-ball a img {
+  position: absolute;
+  top: -41px;
+  left: -11px;
+  width: 60px;
+}
+.quantityMessage {
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  font-size: 10px;
+  color: var(--mainWhite);
+  font-family: var(--mainFontsGithic), sans-serif;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--mainGreen);
+  padding: 5px 5px 5px 6px;
+  width: 23px;
+  height: 23px;
+}

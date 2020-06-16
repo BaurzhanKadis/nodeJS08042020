@@ -6,6 +6,11 @@ export const useAuth = () => {
   const [ token, setToken ] = useState(null);
   const [ userId, setUserId ] = useState(null);
   const [ userNickName, setUserNickName ] = useState(null);
+  const [ menuActive, setMenuActive] = useState(false);
+
+  const menuHandler = useCallback(() => {
+    !menuActive ? setMenuActive(true) : setMenuActive(false);
+  }, [menuActive, setMenuActive])
 
   const login = useCallback((jwtToken, id, nickname) => {
     setToken(jwtToken)
@@ -30,5 +35,5 @@ export const useAuth = () => {
     }
   }, [login])
 
-  return { login, logout, token, userId, userNickName }
+  return { login, logout, token, userId, userNickName, setMenuActive, menuActive, menuHandler }
 }
