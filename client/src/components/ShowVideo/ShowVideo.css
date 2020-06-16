@@ -79,8 +79,8 @@
 } */
 .progress_bar {
   position: absolute;
-  top: 98px;
-  right: 25px;
+  top: 3px;
+  right: 4px;
   width: 65px;
   height: 65px;
   background: rgba(103, 101, 101, 0.5);

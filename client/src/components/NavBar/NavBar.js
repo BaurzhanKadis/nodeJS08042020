@@ -74,7 +74,7 @@ const NavBar = () => {
       dev: true
     },
     {
-      name: "Онлайн-школы",
+      name: "Онлайн-школа",
       icon: (
         <img
           className="icon-item"
