@@ -30,7 +30,7 @@ body {
 } */
 .wrapper {
   height: 100vh;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .overflowHidden {
   overflow: hidden;
