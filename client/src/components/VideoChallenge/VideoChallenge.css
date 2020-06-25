@@ -21,7 +21,7 @@
   align-items: center;
   justify-items: center;
   padding: 5px 15px;
-  grid-template-columns: 50px 174px auto 38px 23px;
+  grid-template-columns: 50px auto auto 38px 23px;
 }
 .VideoChallenge-container .top_info-title {
   padding: 0;

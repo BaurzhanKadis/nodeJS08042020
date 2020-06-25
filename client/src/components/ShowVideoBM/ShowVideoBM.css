@@ -16,3 +16,16 @@
   padding: 10px;
   color: var(--mainWhite)
 }
+.ShowVideoBM-wrapper .top_info-avatar {
+  height: 50px;
+}
+.ShowVideoBM-wrapper .top_info-avatar img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

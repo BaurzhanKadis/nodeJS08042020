@@ -12,13 +12,13 @@ const VideoChallenge = ({ challenge }) => {
 
             <div className="top_info">
               <div className="top_info-avatar">
-                <img src="img/freestyle.png" alt="avatar" />
+                <img src={item.img} alt="avatar" />
               </div>
               <div className="top_info-title">
                 <span className="top_info-title_nickName">
-                  potapov10
+                  {item.userName}
                 </span>
-                <span className="top_info-title_fillName">Домодедово</span>
+                <span className="top_info-title_fillName">{item.city}</span>
               </div>
               <div></div>
               <div className="challenge_add_box"></div>
@@ -48,7 +48,7 @@ const VideoChallenge = ({ challenge }) => {
             <img src="img/elect.png" alt="elect"/>
           </li>
         </ul>
-        <div className="title">{item.name}</div>
+        <div className="title">{item.text}</div>
         <div className="date">Добавлено 2 дня назад</div>
           </div>
         );

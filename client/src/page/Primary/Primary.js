@@ -6,7 +6,7 @@ import "./Primary.css";
 class Primary extends Component {
   render() {
     return (
-      <main style={{ marginBottom: "50px" }}>
+      <main>
         <section className="banner">
           <div className="sale_bcg"></div>
           <p className="sale_title">

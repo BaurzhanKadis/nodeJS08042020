@@ -29,8 +29,8 @@ body {
     monospace;
 } */
 .wrapper {
-  height: 100vh;
-  overflow-x: hidden;
+  height: 100%;
+  margin: 0 0 50px 0;
 }
 .overflowHidden {
   overflow: hidden;

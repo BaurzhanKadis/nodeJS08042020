@@ -15,33 +15,25 @@ const BottumMenu = () => {
           </Link>
         </li>
         <li className="BottumMenuLi-item">
-          <Link>
+          <Link to="#">
             <img src="img/search.png" alt="search"/>
           </Link>
         </li>
         <li className="BottumMenuLi-item center-ball">
-          <Link>
+          <Link to="#"> 
             <img src="img/ball-plus.png" alt="ball-plus"/>
           </Link>
         </li>
         <li className="BottumMenuLi-item">
-          <Link>
+          <Link to="#">
             <img src="img/menu-message.png" alt="menu-message"/>
             <span className="quantityMessage">22</span>
           </Link>
         </li>
-        <li className="BottumMenuLi-item">
-          {/* <div
-            className={menuActive ? "menu active" : "menu"}
-            onClick={menuHandler}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div> */}
-          <Link onClick={auth.menuHandler}>
+        <li className="BottumMenuLi-item" onClick={auth.menuHandler}>
+          {/* <Link to="#" > */}
             <img src="img/menuSetting.png" alt="menuSetting"/>
-          </Link>
+          {/* </Link> */}
         </li>
       </ul>
     </div>

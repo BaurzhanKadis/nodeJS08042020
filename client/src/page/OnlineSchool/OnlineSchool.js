@@ -1,53 +1,129 @@
-import React, { Component } from 'react';
-import ParamsOnlineSchool from '../../components/ParamsOnlineSchool';
-import VideoOnlineSchool from '../../components/VideoOnlineSchool';
+import React, { Component } from "react";
+import ParamsOnlineSchool from "../../components/ParamsOnlineSchool";
+import VideoOnlineSchool from "../../components/VideoOnlineSchool";
 
-import './OnlineSchool.css';
+import "./OnlineSchool.css";
 
 class OnlineSchool extends Component {
   state = {
     lesson: [
-      { id: 1, name: "On-line школа зенита", url: "video/OnlineSchool/1.mp4" },
-      { id: 2, name: "Тренировка с юношеской сборной!", url: "video/OnlineSchool/2.mp4" },
-      { id: 3, name: "Школа Вратарей имени Спирякова", url: "video/OnlineSchool/3.mp4" },
-      { id: 4, name: "Школа Живой футбол. Обучение сильному удару.", url: "video/OnlineSchool/4.mp4" },
-      { id: 5, name: "Школа профи футбол. Урок 1 Финты", url: "video/OnlineSchool/5.mp4" },
-      { id: 6, name: "Школа Футхакера. Урок 1 Финты", url: "video/OnlineSchool/6.mp4" },
+      // {
+      //   name: "Академия ФК Тамбов",
+      //   url: "video/OnlineSchool/acd/FCTombov.mp4",
+      //   filterItem: "acd",
+      // },
+      // {
+      //   name: "Академия ФК Аякс",
+      //   url: "video/OnlineSchool/acd/FCAiks.mp4",
+      //   filterItem: "acd",
+      // },
+      // {
+      //   name: "Академия ФК Чертаново",
+      //   url: "video/OnlineSchool/acd/FCChertanovo.mp4",
+      //   filterItem: "acd"
+      // },
+      {
+        name: "С чего начинается футбол на Дальнем Востоке",
+        url: "video/OnlineSchool/acd/4.mp4",
+        filterItem: "acd"
+      },
+      {
+        name: "Тренировка с футболистами из ФК БАРСЕЛОНА",
+        url: "video/OnlineSchool/acd/FCBarsa.mp4",
+        filterItem: "acd"
+      }, 
+      // {
+      //   name: "Комплекс упражнений на развитие физики",
+      //   url: "video/OnlineSchool/ofp/lesson1.mp4",
+      //   filterItem: "ofp"
+      // },
+      // {
+      //   name: "Тест Купера (тест на выносливость)",
+      //   url: "video/OnlineSchool/ofp/lesson2.mp4",
+      //   filterItem: "ofp"
+      // },
+      {
+        name: "Растяжка",
+        url: "video/OnlineSchool/ofp/lesson3.mp4",
+        filterItem: "ofp"
+      },
+      // {
+      //   name: "Развиваем координацию и быстроту ног",
+      //   url: "video/OnlineSchool/ofp/lesson4.mp4",
+      //   filterItem: "ofp"
+      // },
+      {
+        name: "Обыгрыш на скорости",
+        url: "video/OnlineSchool/tech/lesson1.mp4",
+        filterItem: "tech"
+      },
+      {
+        name: "Четыре упражнения на развитие техники и дриблинга",
+        url: "video/OnlineSchool/tech/lesson2.mp4",
+        filterItem: "tech"
+      },
+      {
+        name: "Приём мяча с уходом от соберника",
+        url: "video/OnlineSchool/tech/lesson3.mp4",
+        filterItem: "tech"
+      },
+      {
+        name: "Финт (Фокус Роналду)",
+        url: "video/OnlineSchool/tech/lesson4.mp4",
+        filterItem: "tech"
+      },
     ],
     itemTeam: [
-      {id: 1, url: "img/goll.png", name: "Финты", active: false, filterItem: "fint"},
-      {id: 2, url: "img/drill.png", name: "Развите техники", active: false, filterItem: "tech"},
-      {id: 3, url: "img/combo.png", name: "ОФП", active: false, filterItem: "ofp"},
+      {
+        url: "img/OS/acd.jpg",
+        name: "Академия",
+        active: false,
+        filterItem: "acd",
+      },
+      {
+        url: "img/OS/tech.jpg",
+        name: "Техника",
+        active: false,
+        filterItem: "tech",
+      },
+      {
+        url: "img/OS/ofp.jpg",
+        name: "Физика",
+        active: false,
+        filterItem: "ofp",
+      },
     ],
-    filter: ""
-  }
+    filter: "acd",
+  };
   onFilterChange = (filter) => {
     this.setState({ filter });
-  }
+  };
   filter(items, filter) {
-    switch(filter) {
-      case 'fint': 
+    switch (filter) {
+      case "acd":
         return items.filter((item) => item.filterItem === filter);
-      case 'tech':
+      case "tech":
         return items.filter((item) => item.filterItem === filter);
-      case 'ofp':
+      case "ofp":
         return items.filter((item) => item.filterItem === filter);
       default:
-        return items;      
+        return items;
     }
-   };
+  }
   render() {
-    // const visibleItems = this.filter(this.state.video, this.state.filter);
+    const visibleItems = this.filter(this.state.lesson, this.state.filter);
     return (
       <div className="OnlineSchool-container">
-        <ParamsOnlineSchool 
+        <ParamsOnlineSchool
           itemTeam={this.state.itemTeam}
-          lesson={this.state.lesson}
+          lesson={visibleItems}
           onFilterChange={this.onFilterChange}
-          filter={this.state.filter}/>
-        <VideoOnlineSchool 
-          // lesson={visibleItems}
-          lesson={this.state.lesson}/>
+          filter={this.state.filter}
+        />
+        <VideoOnlineSchool
+          lesson={visibleItems}
+          // lesson={this.state.lesson}
+        />
       </div>
     );
   }

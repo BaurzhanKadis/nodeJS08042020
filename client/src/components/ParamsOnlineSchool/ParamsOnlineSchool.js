@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Link as LinkLI} from "react-scroll";
+import { Link } from 'react-scroll';
 
 import "./ParamsOnlineSchool.css";
 
@@ -9,13 +9,13 @@ const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange }) => {
   const naviHandler = () => {
     setActiveNavi(!activeNavi) 
   }
-  return (
+  return (// href={`#sec${id+1}`}
     <React.Fragment>
       <ul className="ParamsOnlineSchool-container">
-        {itemTeam.map((item) => {
+        {itemTeam.map((item, id) => {
           return (
             <li
-              key={item.id}
+              key={id}
               className={`ParamsOnlineSchool-block ${
                 filter === item.filterItem
                   ? "ParamsOnlineSchool-block-active"
@@ -35,19 +35,12 @@ const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange }) => {
       </div>
       <div className={`list_itemsLessons ${activeNavi?"list_itemsLessons-active":""}`}>
         <ul className="lesson_items" style={{ width: `${widthItemsMidle*lesson.length}px` }}>
-          {lesson.map((item) => {
+          {lesson.map((item, id) => {
             return (
-              <li className="lesson_item"  key={item.id}>
-                <LinkLI
-                  // href={`#${item.id}`}
-                  to={`sec${item.id}`}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Урок № {item.id}
-                </LinkLI>
+              <li className="lesson_item"  key={id}>
+                <Link to={`sec${id+1}`} spy={true} smooth={true} offset={-70} duration={500}> 
+                  Урок № {id+1}
+                </Link>
               </li>
             );
           })}

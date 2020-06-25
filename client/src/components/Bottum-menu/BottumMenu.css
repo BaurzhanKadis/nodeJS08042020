@@ -17,11 +17,12 @@
   list-style: none;
   display: inline-block;
   width: 40px;
+  cursor: pointer;
 }
 .BottumMenuLi-item a {
   position: relative;
 }
-.BottumMenuLi-item a img {
+.BottumMenuLi-item a img, .BottumMenuLi-item img {
   width: 100%;
 }
 .center-ball a img {
