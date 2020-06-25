@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [ modalActive, setModalActive ] = useState(false)
+  const [modalActive, setModalActive] = useState(false);
   const history = useHistory();
   const auth = useContext(AuthContext);
   const logoutHandler = (event) => {
@@ -13,65 +13,27 @@ const NavBar = () => {
     auth.logout();
     history.push("/");
     auth.setMenuActive(false);
-    setModalActive(false)
+    setModalActive(false);
   };
-  
+
   const classProduct = [
     {
       name: "Главная",
       icon: <img className="icon-item" src="img/menu-home.png" alt="home" />, //<i className="fas fa-home" />
       href: "/",
-      dev: false
-    },
-    {
-      name: "Поиск",
-      icon: <img className="icon-item" src="img/search.png" alt="search" />, //<i className="fas fa-search"></i>,
-      href: "#",
-      dev: true
-    },
-    {
-      name: "Мой Блог",
-      icon: (
-        <img className="icon-item" src="img/user-icon.png" alt="user-icon" />
-      ), //<i className="fas fa-user userIcon"></i>,
-      href: "#",
-      dev: true
+      dev: false,
     },
     {
       name: "Биржа",
       icon: <img className="icon-item" src="img/birzh.png" alt="birzh" />, //<i className="fas fa-comments-dollar"></i>,
       href: "/stock-market",
-      dev: false
-    },
-    {
-      name: "Лента публикаций",
-      icon: <img className="icon-item" src="img/lenta.png" alt="lenta" />, //<i className="fas fa-search"></i>,
-      href: "#",
-      dev: true
+      dev: false,
     },
     {
       name: "Likes kill",
-      icon: <i className="fas fa-search"></i>,
+      icon: <img className="icon-item" src="img/blog.png" alt="blog" />, //<i className="fas fa-search"></i>,
       href: "/likes-kill",
-      dev: false
-    },
-    {
-      name: "Сообщения",
-      icon: <img className="icon-item" src="img/message.png" alt="message" />, //<i className="fas fa-search"></i>,
-      href: "#",
-      dev: true
-    },
-    {
-      name: "Друзья",
-      icon: <img className="icon-item" src="img/friend.png" alt="friend" />, //<i className="fas fa-search"></i>,
-      href: "#",
-      dev: true
-    },
-    {
-      name: "Мои команды",
-      icon: <img className="icon-item" src="img/commanda.png" alt="commanda" />, //<i className="fas fa-search"></i>,
-      href: "#",
-      dev: true
+      dev: false,
     },
     {
       name: "Онлайн-школа",
@@ -83,7 +45,7 @@ const NavBar = () => {
         />
       ), //<i className="fas fa-search"></i>,
       href: "/online-school",
-      dev: false
+      dev: false,
     },
     {
       name: "Челленджи",
@@ -91,43 +53,87 @@ const NavBar = () => {
         <img className="icon-item" src="img/challenge.png" alt="challenge" />
       ), //<i className="fas fa-search"></i>,
       href: "/challenge",
-      dev: false
+      dev: false,
     },
     {
       name: "Лучшие моменты",
       icon: <img className="icon-item" src="img/best.png" alt="best" />, //<i className="fas fa-search"></i>,
       href: "/best-moment",
-      dev: false
+      dev: false,
     },
     {
       name: "Дневник",
       icon: <img className="icon-item" src="img/dairy.png" alt="best" />, //<i className="fas fa-search"></i>,
       href: "/diary",
-      dev: false
+      dev: false,
     },
     {
       name: "Коробка",
       icon: <img className="icon-item" src="img/box.png" alt="best" />, //<i className="fas fa-search"></i>,
       href: "/box",
-      dev: false
+      dev: false,
+    },
+    {
+      name: "Поиск",
+      icon: <img className="icon-item" src="img/search.png" alt="search" />, //<i className="fas fa-search"></i>,
+      href: "#",
+      dev: true,
+    },
+    {
+      name: "Лента публикаций",
+      icon: <img className="icon-item" src="img/lenta.png" alt="lenta" />, //<i className="fas fa-search"></i>,
+      href: "#",
+      dev: true,
+    },
+    {
+      name: "Мой Блог",
+      icon: (
+        <img className="icon-item" src="img/user-icon.png" alt="user-icon" />
+      ), //<i className="fas fa-user userIcon"></i>,
+      href: "#",
+      dev: true,
+    },
+    {
+      name: "Сообщения",
+      icon: <img className="icon-item" src="img/message.png" alt="message" />, //<i className="fas fa-search"></i>,
+      href: "#",
+      dev: true,
+    },
+    {
+      name: "Друзья",
+      icon: <img className="icon-item" src="img/friend.png" alt="friend" />, //<i className="fas fa-search"></i>,
+      href: "#",
+      dev: true,
+    },
+    {
+      name: "Мои команды",
+      icon: <img className="icon-item" src="img/commanda.png" alt="commanda" />, //<i className="fas fa-search"></i>,
+      href: "#",
+      dev: true,
     },
     {
       name: "Каталог блогера",
       icon: <img className="icon-item" src="img/blog.png" alt="blog" />, //<i className="fas fa-search"></i>,
       href: "#",
-      dev: true
+      dev: true,
     },
     {
       name: "Чаты",
       icon: <img className="icon-item" src="img/chat.png" alt="chat" />, //<i className="fas fa-search"></i>,
       href: "#",
-      dev: true
+      dev: true,
     },
     {
       name: "Новости футбола",
-      icon: <img className="icon-item" src="img/newsFotball.png" alt="newsFotball" />, //<i className="fas fa-search"></i>,
+      icon: (
+        <img
+          className="icon-item"
+          src="img/newsFotball.png"
+          alt="newsFotball"
+        />
+      ), //<i className="fas fa-search"></i>,
       href: "#",
-      dev: true
+      dev: true,
     },
     {
       name: "Рейтинги",
@@ -176,13 +182,14 @@ const NavBar = () => {
   const navBarMenu = classProduct.map((item, id) => {
     return (
       <li className="nav-bar-item" key={id}>
-        <Link
-          to={item.href}
-          onClick={()=>auth.setMenuActive(false)}
-        >
+        <Link style={item.dev ? {color: "#858585"} : null} to={item.href} onClick={() => auth.setMenuActive(false)}>
           {item.icon}
           {item.name}
-          {item.dev && <span style={{ fontSize: "10px", marginLeft: "10px" }}>в разработке</span>}
+          {item.dev && (
+            <span style={{ fontSize: "10px", marginLeft: "10px", color: "#858585" }}>
+              в разработке
+            </span>
+          )}
         </Link>
       </li>
     );
@@ -220,8 +227,13 @@ const NavBar = () => {
       title = "Главная";
   }
   return (
-    <header>
+    <React.Fragment>
       <nav className={auth.menuActive ? "nav-bar active" : "nav-bar"}>
+        <div className="title_menuTop">
+          <img className="title_menuTop-icon" src="img/settings.png" alt="settings"/>
+          <span>Меню</span>
+          <img className="title_menuTop-icon" src="img/menu-igol.png" alt="menu-igol"/>
+        </div>
         <ul>
           {navBarMenu}
           <li className="nav-bar-item">
@@ -232,13 +244,14 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-      <div className="header">
-        <div className="logo">
-          <Link className="logo_title" to="/">
-            <img className="logo_img" src="img/LSblack.png" alt="logo" />
-          </Link>
-        </div>
-        {/* {title === "Главная" ? (
+      <header>
+        <div className="header">
+          <div className="logo">
+            <Link className="logo_title" to="/">
+              <img className="logo_img" src="img/LSblack.png" alt="logo" />
+            </Link>
+          </div>
+          {/* {title === "Главная" ? (
           <div className="logo">
             <img className="logo_img" src="img/LSblack.png" alt="logo" />
             <Link className="logo_title" to="/">
@@ -247,7 +260,7 @@ const NavBar = () => {
             <img className="logo_img" src="img/LSblack.png" alt="logo"/>
           </div>
         ) : null} */}
-        {/* <nav className="nav">
+          {/* <nav className="nav">
             <ul>
               <li className="nav-item"><a href="#">work</a></li>
               <li className="nav-item"><a href="#">service</a></li>
@@ -256,10 +269,10 @@ const NavBar = () => {
               <li className="nav-item"><a href="#">contact</a></li>
             </ul>
           </nav> */}
-        <div className="title_page">
-          <span>{title}</span>
-        </div>
-        {/* <div
+          <div className="title_page">
+            <span>{title}</span>
+          </div>
+          {/* <div
           className={auth.menuActive ? "menu active" : "menu"}
           onClick={auth.menuHandler}
         >
@@ -267,25 +280,31 @@ const NavBar = () => {
           <span></span>Личная информация, настройки, статистика, выйти из аккаунта.
           <span></span>
         </div> */}
-        {auth.token ? (
-          <div className="userName">
-            <img src="img/avatar.png" alt="avatar" onClick={()=>setModalActive(!modalActive)}/>
-            <div className={`modal ${modalActive ? "modal-active " : ""}`}>
-              <ul>
-                <li>Личная информация</li>
-                <li>Настройки</li>
-                <li>статистика</li>
-                <li onClick={logoutHandler}>Выйти <i className="fas fa-sign-out-alt"></i></li>
-              </ul>
+          {auth.token ? (
+            <div className="userName">
+              <img
+                src="img/avatar.png"
+                alt="avatar"
+                onClick={() => setModalActive(!modalActive)}
+              />
+              <div className={`modal ${modalActive ? "modal-active " : ""}`}>
+                <ul>
+                  <li>Личная информация</li>
+                  <li>Настройки</li>
+                  <li>статистика</li>
+                  <li onClick={logoutHandler}>
+                    Выйти <i className="fas fa-sign-out-alt"></i>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="userNameLock">
-            <i className="fas fa-user-lock userLock"></i>
-            <Link to="/login">Войти</Link>
-          </div>
-        )}
-        {/* {auth.token ? (
+          ) : (
+            <div className="userNameLock">
+              <i className="fas fa-user-lock userLock"></i>
+              <Link to="/login">Войти</Link>
+            </div>
+          )}
+          {/* {auth.token ? (
           <div className="userName">
             <i className="fas fa-user userIcon"></i>
             <span>{auth.userNickName}</span>
@@ -300,8 +319,9 @@ const NavBar = () => {
             <Link to="/login">Войти</Link>
           </div>
         )} */}
-      </div>
-    </header>
+        </div>
+      </header>
+    </React.Fragment>
   );
 };
 

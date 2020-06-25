@@ -1,22 +1,35 @@
-import React from 'react';
+import React from "react";
 
-import './ParamsTypes.css';
+import "./ParamsTypes.css";
 
-const ParamsTypes = () => {
+const ParamsTypes = ({ paramsTypes, onParamChange, param }) => {
   return (
     <div className="ParamsTypes-container">
-      <div className="ParamsTypes-block">
+      <ul>
+        {paramsTypes.map((item) => {
+          return (
+            <li 
+              key={item.id} 
+              className={`ParamsTypes-block ${item.type === param ? "ParamsTypes-block-active" : ""}`}
+              onClick={()=>onParamChange(item.type)}>
+                <img src={item.img} alt="goll" />
+                <span>{item.name}</span>
+            </li>
+          );
+        })}
+      </ul>
+      {/* <div className="ParamsTypes-block">
         <img src="img/goll.png" alt="goll"/>
         <span>Голы</span>
       </div>
       <div className="ParamsTypes-block">
         <img src="img/drill.png" alt="drill"/>
-        <span>Дриблинг</span>
+        <span>Фэилы</span> 
       </div>
       <div className="ParamsTypes-block">
         <img src="img/combo.png" alt="combo"/>
         <span>Комбинации</span>
-      </div>
+      </div> */}
     </div>
   );
 };
