@@ -7,21 +7,21 @@ import "./OnlineSchool.css";
 class OnlineSchool extends Component {
   state = {
     lesson: [
-      // {
-      //   name: "Академия ФК Тамбов",
-      //   url: "video/OnlineSchool/acd/FCTombov.mp4",
-      //   filterItem: "acd",
-      // },
-      // {
-      //   name: "Академия ФК Аякс",
-      //   url: "video/OnlineSchool/acd/FCAiks.mp4",
-      //   filterItem: "acd",
-      // },
-      // {
-      //   name: "Академия ФК Чертаново",
-      //   url: "video/OnlineSchool/acd/FCChertanovo.mp4",
-      //   filterItem: "acd"
-      // },
+      {
+        name: "Академия ФК Тамбов",
+        url: "video/OnlineSchool/acd/1.mp4",
+        filterItem: "acd",
+      },
+      {
+        name: "Академия ФК Аякс",
+        url: "video/OnlineSchool/acd/2.mp4",
+        filterItem: "acd",
+      },
+      {
+        name: "Академия ФК Чертаново",
+        url: "video/OnlineSchool/acd/3.mp4",
+        filterItem: "acd"
+      },
       {
         name: "С чего начинается футбол на Дальнем Востоке",
         url: "video/OnlineSchool/acd/4.mp4",
@@ -32,26 +32,26 @@ class OnlineSchool extends Component {
         url: "video/OnlineSchool/acd/FCBarsa.mp4",
         filterItem: "acd"
       }, 
-      // {
-      //   name: "Комплекс упражнений на развитие физики",
-      //   url: "video/OnlineSchool/ofp/lesson1.mp4",
-      //   filterItem: "ofp"
-      // },
-      // {
-      //   name: "Тест Купера (тест на выносливость)",
-      //   url: "video/OnlineSchool/ofp/lesson2.mp4",
-      //   filterItem: "ofp"
-      // },
+      {
+        name: "Комплекс упражнений на развитие физики",
+        url: "video/OnlineSchool/ofp/4.mp4",
+        filterItem: "ofp"
+      },
+      {
+        name: "Тест Купера (тест на выносливость)",
+        url: "video/OnlineSchool/ofp/5.mp4",
+        filterItem: "ofp"
+      },
       {
         name: "Растяжка",
         url: "video/OnlineSchool/ofp/lesson3.mp4",
         filterItem: "ofp"
       },
-      // {
-      //   name: "Развиваем координацию и быстроту ног",
-      //   url: "video/OnlineSchool/ofp/lesson4.mp4",
-      //   filterItem: "ofp"
-      // },
+      {
+        name: "Развиваем координацию и быстроту ног",
+        url: "video/OnlineSchool/ofp/6.mp4",
+        filterItem: "ofp"
+      },
       {
         name: "Обыгрыш на скорости",
         url: "video/OnlineSchool/tech/lesson1.mp4",
