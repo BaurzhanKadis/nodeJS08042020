@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import { Route, Redirect } from "react-router-dom";
 import { AuthContext } from './context/AuthContext';
 import { useAuth } from "./hooks/auth.hook";
@@ -7,6 +7,7 @@ import Auth from "./page/Auth";
 import Primary from "./page/Primary";
 import NavBar from './components/NavBar';
 import BottumMenu from './components/Bottum-menu';
+import Loaded from './components/Loaded';
 import StockMarket from './page/StockMarket';
 import LikesKill from './page/LikesKill';
 import BestMoment from './page/BestMoment';
@@ -20,9 +21,16 @@ import './index.css';
 function App() {
   const { login, logout, token, userId, userNickName, menuActive, setMenuActive, menuHandler } = useAuth();
   const isAuthenticated = !!token;
+  const [load, setLoad] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => setLoad(false), 5000);
+  });
+
+  console.log(load, 'loading')
   return (
     <AuthContext.Provider value={{ login, logout, token, userId, userNickName, setMenuActive, menuActive, menuHandler }}>
+      {load ? <Loaded /> : null}
       <div className={`wrapper ${menuActive ? "overflowHidden" : ""}`}>
         <NavBar />
         <Route exact path={[ "/login", "/register"]} component={Auth} />
