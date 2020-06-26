@@ -21,16 +21,15 @@ import './index.css';
 function App() {
   const { login, logout, token, userId, userNickName, menuActive, setMenuActive, menuHandler } = useAuth();
   const isAuthenticated = !!token;
-  const [load, setLoad] = useState(true);
+  // const [load, setLoad] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => setLoad(false), 5000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => setLoad(false), 5000);
+  // });
 
-  console.log(load, 'loading')
   return (
     <AuthContext.Provider value={{ login, logout, token, userId, userNickName, setMenuActive, menuActive, menuHandler }}>
-      {load ? <Loaded /> : null}
+      {/* {load ? <Loaded /> : null} */}
       <div className={`wrapper ${menuActive ? "overflowHidden" : ""}`}>
         <NavBar />
         <Route exact path={[ "/login", "/register"]} component={Auth} />
