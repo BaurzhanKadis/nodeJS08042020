@@ -74,6 +74,13 @@
   border-bottom: 1px solid;
   padding: 8px;
 }
+.DiaryComponent-ul li .challenge_dots {
+  width: auto;
+  height: auto;
+}
+.DiaryComponent-ul li .challenge_dots span {
+  position: inherit;
+}
 .DiaryComponent-add_event {
   text-align: center;
   margin: 20px;

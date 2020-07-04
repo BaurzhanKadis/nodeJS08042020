@@ -197,7 +197,7 @@ const dataUsers = [
 ];
 const date = new Date();
 
-const ListUsers = ({ total, male }) => {
+const ListUsers = ({ total, male, toggleModal }) => {
   const listUser = dataUsers
     .filter((item) => {
       return total
@@ -228,7 +228,9 @@ const ListUsers = ({ total, male }) => {
             ) : (
               <div>{item.goll} голов за прошлый сезон</div>
             )}
-            <div className="list_user-data_link">Посмотреть анкету</div>
+            <div 
+              className="list_user-data_link"
+              onClick={toggleModal}>Посмотреть анкету</div>
           </div>
         </li>
       );

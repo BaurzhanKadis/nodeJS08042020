@@ -1,10 +1,8 @@
 import React from 'react';
 
 import './SettingParams.css';
-const settingHandler = () => {
-  console.log("settingHandler")
-}
-const SettingParams = () => {
+
+const SettingParams = ({ settingHandler }) => {
   return (
     <div className="setting_params-container">
       <span className="setting_params-link" onClick={settingHandler}>

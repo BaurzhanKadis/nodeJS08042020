@@ -5,12 +5,12 @@ import "./VideoOnlineSchool.css";
 
 const VideoOnlineSchool = ({ lesson }) => {
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column-reverse" }}>
       {lesson.map((item, id) => {
         return (
           <div key={id}>
             <div id={`sec${id+1}`} className="top_infoLesson">
-              Урок № {id+1}
+              Выпуск № {id+1}
               <span> {item.name}</span>
             </div>
             <div className="pleer_lesson">
@@ -19,7 +19,6 @@ const VideoOnlineSchool = ({ lesson }) => {
           </div>
         );
       })}
-      <div style={{ marginBottom: "60px", width: "100%", height: "1px" }}></div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import Calendar from "react-calendar";
 
 import "./DiaryComponent.css";

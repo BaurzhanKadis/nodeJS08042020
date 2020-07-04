@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactPlayer from 'react-player';
 
 import "./ShowVideo.css";
@@ -9,8 +9,10 @@ const progress = (procent) => {
   return offset;
 };
  
-const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem, opts}) => {
+const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem }) => {
   // const [disLikeAction, setDisLikeAction] = useState(false)
+  const [modalImg, setModalImg] = useState(false)
+
   const youtube =  video.map((item) => {
     const ed = item.like + item.disLike;
     const procent = Math.round(item.like/ed*100);

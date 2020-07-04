@@ -139,7 +139,7 @@ const NavBar = () => {
       name: "Рейтинги",
       icon: <img className="icon-item" src="img/reiting.png" alt="reiting" />, //<i className="fas fa-search"></i>,
       href: "#",
-      dev: true,
+      dev: false,
     },
     {
       name: "Клубы",
@@ -223,6 +223,12 @@ const NavBar = () => {
     case "/diary":
       title = "Дневник";
       break;
+    case "/profile":
+      title = "Профиль";
+      break;
+    // case "/reiting":
+    //   title = "Рейтинг";
+    //   break; 
     default:
       title = "Главная";
   }
@@ -289,7 +295,7 @@ const NavBar = () => {
               />
               <div className={`modal ${modalActive ? "modal-active " : ""}`}>
                 <ul>
-                  <li>Личная информация</li>
+                  <li><Link to="/profile">Личная информация</Link></li>
                   <li>Настройки</li>
                   <li>статистика</li>
                   <li onClick={logoutHandler}>

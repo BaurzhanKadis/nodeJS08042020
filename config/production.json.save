@@ -4,3 +4,6 @@
   "mongoUri": "mongodb+srv://vladilen:1234qwer@cluster0-kggc2.azure.mongodb.net/app?retryWrites=true&w=majority",
   "baseUrl": "http://.ru"
 }
+
+
+// "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""

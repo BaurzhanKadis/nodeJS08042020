@@ -12,7 +12,7 @@ router.post('/register',
   [
     check('email', 'Некорректный Email').isEmail(),
     check('password', 'Минимальная длинна пороля 6 символов').isLength({min:6}),
-    check('nickname').isString()
+    check('nickname').isString(),
   ],
   async (req,res) => {
   try {
@@ -23,7 +23,7 @@ router.post('/register',
         message: "Некорректные данные при регистрации"
       })
     }
-    const {email, password, nickname} = req.body;
+    const {email, password, nickname } = req.body;
     const condidate = await User.findOne({ email });
     if (condidate) {
       return res.status(400).json({message: "Такой пользователь уже существует!"})
@@ -32,7 +32,7 @@ router.post('/register',
     const user = new User({
       email,
       password: hashedPassowrd,
-      nickname
+      nickname,
     });
     await user.save();
     res.status(201).json({ message: "Пользователь создан"})

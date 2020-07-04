@@ -1,3 +1,32 @@
 .stock_market {
   background-color: var(--mainGrey);
 }
+.stock_market-modal-container {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.stock_market-modal {
+  width: 80%;
+  position: relative;
+  text-align: center;
+  background-color: var(--mainBlack);
+}
+.stock_market-modal span {
+  font-family: var(--mainFontsGithic), sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  display: block;
+  color: var(--mainWhite)
+}
+.stock_market-modal img {
+  width: 85%;
+  margin-bottom: 25px;
+}

@@ -39,7 +39,7 @@ const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange }) => {
             return (
               <li className="lesson_item"  key={id}>
                 <Link to={`sec${id+1}`} spy={true} smooth={true} offset={-70} duration={500}> 
-                  Урок № {id+1}
+                  Выпуск № {id+1}
                 </Link>
               </li>
             );

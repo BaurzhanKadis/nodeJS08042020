@@ -15,6 +15,8 @@ import Box from './page/Box';
 import OnlineSchool from './page/OnlineSchool';
 import Challenge from './page/Challenge';
 import Diary from './page/Diary';
+import Profile from './page/Profile';
+
 
 import './index.css';
 
@@ -41,6 +43,7 @@ function App() {
         <Route exact path="/online-school" component={OnlineSchool} />
         <Route exact path="/challenge" component={Challenge} />
         <Route exact path="/diary" component={Diary} />
+        <Route exact path="/profile" component={Profile} />
         {isAuthenticated ? <Redirect to="/primary" /> : null }
         <BottumMenu />
       </div>

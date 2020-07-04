@@ -13,7 +13,10 @@ const schema = new Schema({
   },
   nickname: {
     type: String,
-  }
+  },
+  // avatar: {
+  //   type: String,
+  // }
 });
 
 module.exports = model('User', schema);
