@@ -17,6 +17,8 @@ class Challenge extends Component {
         add: false,
         dot: false,
         filterItem: "volley",
+        like: 2000,
+        date: "Mon Jul 04 2020 14:49:28",
       },
       {
         id: 2,
@@ -28,6 +30,8 @@ class Challenge extends Component {
         add: false,
         dot: false,
         filterItem: "volley",
+        like: 2050,
+        date: "Mon Jul 03 2020 14:49:28",
       },
       {
         id: 3,
@@ -39,6 +43,8 @@ class Challenge extends Component {
         add: false,
         dot: false,
         filterItem: "dribbling",
+        like: 2080,
+        date: "Mon Jul 04 2020 14:49:28",
       },
       {
         id: 4,
@@ -50,6 +56,8 @@ class Challenge extends Component {
         add: false,
         dot: false,
         filterItem: "dribbling",
+        like: 9520,
+        date: "Mon Jul 03 2020 14:49:28",
       },
       {
         id: 5,
@@ -61,20 +69,21 @@ class Challenge extends Component {
         add: false,
         dot: false,
         filterItem: "freestyle",
-        // label: null,
+        like: 4000,
+        date: "Mon Jul 04 2020 14:49:28",
       },
       {
         id: 6,
         userName: "Alex Berger",
         img: "img/che/AlexBerger.jpg",
         city: "Германия, Кёльн",
-        // name: "wallskill!",
+        date: "Mon Jul 03 2020 14:49:28",
         url: "video/Challenge/wallskill.mp4",
         text: `Hi. Can you repeat the "#WALLBALL" challenge?`,
         add: false,
         dot: false,
         filterItem: "freestyle",
-        // label: null,
+        like: 5000
       },
     ],
     itemTeam: [
@@ -105,12 +114,31 @@ class Challenge extends Component {
     labelUl: [
       {id: 1,name:"Профиль игрока",},
       {id: 2,name:"Копировать ссылку",},
-      {id: 3,name:"Скрыть публикации",}]
+      {id: 3,name:"Скрыть публикации",}],
+    setting: 2,
+    filterParam: [
+      {id:1, name: "По популярности"},
+      {id:2, name: "По дате добавления"}
+    ]
   };
   onFilterChange = (filter) => {
     this.setState({ filter });
   };
-  
+  onToggleLike = (id) => {
+    this.setState(({ challenge }) => {
+      const idx = challenge.findIndex((el) => el.id === id);
+      const oldItem = challenge[idx];
+      const newItem = { ...oldItem, like: oldItem.like + 1 };
+      const newArray = [ 
+        ...challenge.slice(0, idx),
+        newItem,
+        ...challenge.slice(idx + 1)
+      ];
+      return {
+        challenge: newArray
+      }
+    })
+  }
   onToggleAdd = (id) => {
     this.setState(({ challenge }) => {
       const idx = challenge.findIndex((el) => el.id === id);
@@ -144,6 +172,17 @@ class Challenge extends Component {
   onToggleLable = (label) => {
     this.setState({ label })
   }
+  prom = (id, setting) => {
+    this.setState({ setting })
+    switch (id) {
+      case 1:
+        return this.state.challenge.sort((a,b)=>{return b.like-a.like});
+      case 2: 
+        return this.state.challenge.sort((a,b)=>{return new Date(b.date).getTime()-new Date(a.date).getTime()});
+      default:
+        return 1
+    }
+   }
   filter(items, filter) {
     switch (filter) {
       case "volley":
@@ -162,13 +201,15 @@ class Challenge extends Component {
       <div className="Challenge-container">
         <ParamsChallenge
           itemTeam={this.state.itemTeam}
-          // challenge={this.state.challenge}
           onFilterChange={this.onFilterChange}
           filter={this.state.filter}
+          prom={this.prom} 
+          setting={this.state.setting} 
+          filterParam={this.state.filterParam}
         />
         <VideoChallenge 
           onToggleAdd={this.onToggleAdd} 
-          // challenge={this.state.challenge} 
+          onToggleLike={this.onToggleLike}
           challenge={visibleItems} 
           onToggleDot={this.onToggleDot}
           labelUl={this.state.labelUl}

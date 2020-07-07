@@ -1,5 +1,7 @@
 import React from "react";
 import ReactPlayer from "react-player";
+import { formatDistanceToNow } from 'date-fns'
+import ruLocale from "date-fns/locale/ru";
 
 import "./VideoChallenge.css";
 
@@ -10,6 +12,7 @@ const VideoChallenge = ({
   label,
   onToggleLable,
   labelUl,
+  onToggleLike
 }) => {
   return (
     <div className="VideoChallenge-container">
@@ -62,9 +65,9 @@ const VideoChallenge = ({
               <ReactPlayer url={item.url} controls width="100%" height="100%" />
             </div>
             <ul className="infoBlock">
-              <li>
+              <li onClick={()=>onToggleLike(item.id)}>
                 <img src="img/like.png" alt="like" />
-                <span>1000</span>
+                <span>{item.like}</span>
               </li>
               <li>
                 <img src="img/shares.png" alt="shares" />
@@ -79,7 +82,9 @@ const VideoChallenge = ({
               </li>
             </ul>
             <div className="title">{item.text}</div>
-            <div className="date">Добавлено 2 дня назад</div>
+            <div className="date">
+              Добавлено {formatDistanceToNow(new Date(item.date), { addSuffix: true, locale: ruLocale })}
+            </div>
           </div>
         );
       })}

@@ -74,6 +74,12 @@ const NavBar = () => {
       dev: false,
     },
     {
+      name: "Рейтинги",
+      icon: <img className="icon-item" src="img/reiting.png" alt="reiting" />, //<i className="fas fa-search"></i>,
+      href: "/rating",
+      dev: false,
+    },
+    {
       name: "Поиск",
       icon: <img className="icon-item" src="img/search.png" alt="search" />, //<i className="fas fa-search"></i>,
       href: "#",
@@ -135,12 +141,12 @@ const NavBar = () => {
       href: "#",
       dev: true,
     },
-    {
-      name: "Рейтинги",
-      icon: <img className="icon-item" src="img/reiting.png" alt="reiting" />, //<i className="fas fa-search"></i>,
-      href: "#",
-      dev: false,
-    },
+    // {
+    //   name: "Рейтинги",
+    //   icon: <img className="icon-item" src="img/reiting.png" alt="reiting" />, //<i className="fas fa-search"></i>,
+    //   href: "#",
+    //   dev: false,
+    // },
     {
       name: "Клубы",
       icon: <img className="icon-item" src="img/club.png" alt="club" />, //<i className="fas fa-search"></i>,
@@ -226,9 +232,9 @@ const NavBar = () => {
     case "/profile":
       title = "Профиль";
       break;
-    // case "/reiting":
-    //   title = "Рейтинг";
-    //   break; 
+    case "/rating":
+      title = "Рейтинг";
+      break; 
     default:
       title = "Главная";
   }

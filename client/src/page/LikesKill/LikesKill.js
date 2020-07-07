@@ -84,12 +84,8 @@ class LikesKill extends React.Component {
         };
       })
   };
-  mouse = (e) => {
-    console.log(e.clientX);
-  }
   filter = (items, filter) => {
     const idx = filter.findIndex((el) => el.active === true);
-    // const itemzzz = filterData[idx];
     switch(idx) {
       case 0: 
         return items;
@@ -111,13 +107,10 @@ class LikesKill extends React.Component {
       <div className="likes_kill-container">
         <Rubrika filterTodos={this.state.filterData} onFilterDone={this.onFilterDone}/>
         <ShowVideo 
-          // opts={opts} 
           video={visibleItems} 
-          // video={this.state.video} 
           disLikeHandler={this.disLikeHandler} 
           likeHandler={this.likeHandler}
           deleteItem={this.deleteItem}
-          // mouse={this.mouse}
         />
       </div>
     );

@@ -16,7 +16,9 @@ class BestMoment extends Component {
         img: "img/BM/m/G-DriveTV.jpg",
         url: "video/BestMomemt/goll/men/zenit.mp4",
         male: "m",
-        type: "gol"
+        type: "gol",
+        date: "Mon Jul 04 2020 14:49:28",
+        like: 2000
       },
       {
         title: "MEXES забил сумашедший гол через себя в Лиге Чемпионов",
@@ -25,7 +27,9 @@ class BestMoment extends Component {
         img: "img/BM/m/MarafonTV.jpg",
         url: "video/BestMomemt/goll/men/milan.mp4",
         male: "m",
-        type: "gol"
+        type: "gol",
+        date: "Mon Jul 06 2020 14:30:28",
+        like: 1990
       },
       {
         title: `Дальний удар Ивана Облякова в ворота "Краснодара"`,
@@ -34,7 +38,9 @@ class BestMoment extends Component {
         img: "img/BM/m/3.jpg",
         url: "video/BestMomemt/goll/men/cska.mp4",
         male: "m",
-        type: "drill"
+        type: "drill",
+        date: "Mon Jul 06 2020 14:20:28",
+        like: 199
       },
       {
         title: "Нападающий ФК Подольск ловко обманул вратаря и забил красивый гол",
@@ -43,7 +49,9 @@ class BestMoment extends Component {
         img: "img/BM/l/Channel.jpg",
         url: "video/BestMomemt/goll/lub/mini.mp4",
         male: "l",
-        type: "combo"
+        type: "combo",
+        date: "Mon Jul 06 2020 14:10:28",
+        like: 3000
       },
       {
         title: "Анна Воронина на 81 минуте оформляет хет-трик",
@@ -52,7 +60,9 @@ class BestMoment extends Component {
         img: "img/BM/l/2.jpg",
         url: "video/BestMomemt/goll/lub/Anna.mp4",
         male: "l",
-        type: "combo"
+        type: "combo",
+        date: "Mon Jul 06 2020 13:50:28",
+        like: 4201
       },
       {
         title: "Екатерина Сивец исполнила отличный дальний удар",
@@ -61,7 +71,9 @@ class BestMoment extends Component {
         img: "img/BM/l/2.jpg",
         url: "video/BestMomemt/goll/lub/kat.mp4",
         male: "l",
-        type: "gol"
+        type: "gol",
+        date: "Mon Jul 06 2020 12:20:28",
+        like: 1990
       },
       {
         title: "Идеальная траектория удара",
@@ -70,7 +82,9 @@ class BestMoment extends Component {
         img: "img/BM/l/4.jpg",
         url: "video/BestMomemt/goll/lub/best.mp4",
         male: "l",
-        type: "combo"
+        type: "combo",
+        date: "Mon Jul 06 2020 11:20:28",
+        like: 5555
       },
       {
         title: `Победный гол Андрея Миронова в финале турнира "Кожанный мяч" (Волга 0:1 Днепр)`,
@@ -79,7 +93,9 @@ class BestMoment extends Component {
         img: "img/BM/l/4.jpg",
         url: "video/BestMomemt/goll/lub/top.mp4",
         male: "l",
-        type: "gol"
+        type: "gol",
+        date: "Mon Jul 06 2020 10:20:28",
+        like: 1991
       },
       {
         title: "Нападающая английской сборной Джессика Адамс точным ударом перекинула вратаря и отправила мяч в ворота сборной Алжира. (Англия 1:0 Алжир)",
@@ -88,7 +104,9 @@ class BestMoment extends Component {
         img: "img/BM/w/1.jpg",
         url: "video/BestMomemt/goll/woman/one.mp4",
         male: "w",
-        type: "f"
+        type: "f",
+        date: "Mon Jul 05 2020 14:20:28",
+        like: 418
       },
       {
         title: "Алиса Кёльн удивила всех своим потрясающим ударом.(Германия 5:1 Норвегия)",
@@ -97,7 +115,9 @@ class BestMoment extends Component {
         img: "img/BM/w/2.jpg",
         url: "video/BestMomemt/goll/woman/two.mp4",
         male: "w",
-        type: "gol"
+        type: "gol",
+        date: "Mon Jul 04 2020 14:20:28",
+        like: 1984
       },
       {
         title: "Гол с 25 метров в матче женского чемпионата России.",
@@ -106,7 +126,9 @@ class BestMoment extends Component {
         img: "img/BM/w/3.jpg",
         url: "video/BestMomemt/goll/woman/three.mp4",
         male: "w",
-        type: "save"
+        type: "save",
+        date: "Mon Jul 02 2020 14:20:28",
+        like: 184
       },
       {
         title: "Вышел на балкон и увидел настоящее Дерби",
@@ -115,7 +137,9 @@ class BestMoment extends Component {
         img: "img/BM/c/1.jpg",
         url: "video/BestMomemt/children/1.mp4",
         male: "c",
-        type: "f"
+        type: "f",
+        date: "Mon Jul 01 2020 14:20:28",
+        like: 194
       },
       {
         title: "Обманул финтом вратаря и забил",
@@ -124,7 +148,9 @@ class BestMoment extends Component {
         img: "img/BM/c/2.png",
         url: "video/BestMomemt/children/2.mp4",
         male: "c",
-        type: "f"
+        type: "f",
+        date: "Mon Jul 01 2020 10:20:28",
+        like: 912
       },
       {
         title: "Вы только посмотрите на этот космический пенальти!",
@@ -133,7 +159,9 @@ class BestMoment extends Component {
         img: "img/BM/c/3.jpg",
         url: "video/BestMomemt/children/3.mp4",
         male: "c",
-        type: "narod"
+        type: "narod",
+        date: "Mon Jul 03 2020 18:20:28",
+        like: 1977
       },
     ],
     male: [
@@ -151,7 +179,13 @@ class BestMoment extends Component {
       { id: 6, name: "Болельщики", img: "img/combo.png", active: false, type: "narod" },
     ],
     filter: "m",
-    param: "gol"
+    param: "gol",
+    visible: false,
+    setting: 1,
+    filterParam: [
+      {id:1, name: "По популярности"},
+      {id:2, name: "По дате добавления"}
+    ]
   };
   onParamChange = (param) => {
     this.setState({ param });
@@ -159,7 +193,26 @@ class BestMoment extends Component {
   onFilterChange = (filter) => {
     this.setState({ filter });
   };
+  onVisibleSetting = () => {
+    this.setState({
+      visible: !this.state.visible
+    })
+  }
   
+  // onToggleSetting = (setting) => {
+  //   this.setState({ setting })
+  // }
+  prom = (id, name, setting) => {
+    this.setState({ setting })
+    switch (id) {
+      case 1:
+        return this.state.video.sort((a,b)=>{return b.like-a.like});
+      case 2: 
+        return this.state.video.sort((a,b)=>{return new Date(b.date).getTime()-new Date(a.date).getTime()});
+      default:
+        return 1
+    }
+   }
   filter(items, filter) {
     switch (filter) {
       case "m":
@@ -175,17 +228,18 @@ class BestMoment extends Component {
     }
   }
   render() {
-    console.log(this.state.param)
     const visibleItems = this.filter(this.state.video, this.state.filter);
     return (
       <div className="best_moment-container">
-        <ParamsBestMoment
-          male={this.state.male}
-          onFilterChange={this.onFilterChange}
-          filter={this.state.filter}
-        />
-        <ParamsTypes param={this.state.param} onParamChange={this.onParamChange} paramsTypes={this.state.paramsTypes}/>
-        <SettingParamsBest />
+        <div className={`visibleParam ${this.state.visible?"onVisibleParam":""}`}>
+          <ParamsBestMoment
+            male={this.state.male}
+            onFilterChange={this.onFilterChange}
+            filter={this.state.filter}
+          />
+          <ParamsTypes param={this.state.param} onParamChange={this.onParamChange} paramsTypes={this.state.paramsTypes}/>
+        </div>
+        <SettingParamsBest prom={this.prom} setting={this.state.setting} filterParam={this.state.filterParam} onVisibleSetting={this.onVisibleSetting} visible={this.state.visible}/>
         <ShowVideoBM param={this.state.param} video={visibleItems} />
       </div>
     );

@@ -2,16 +2,21 @@ import React from 'react';
 
 import './SettingParamsBest.css';
 
-const SettingParamsBest = () => {
+const SettingParamsBest = ({ visible, onVisibleSetting, filterParam, setting, prom }) => {
   return (
     <div className="SettingParamsBest-container">
-      <div className="SettingParamsBest-block">
-        <span>По популярности</span>
-      </div>
-      <div className="SettingParamsBest-block">
-        <span>По дате добавления</span>
-      </div>
-      <div className="top-bottum">
+      {filterParam.map((item)=>{
+        return <div key={item.id} 
+                    // onClick={()=>onToggleSetting(item.id)} 
+                    onClick={()=>prom(item.id, item.name, item.id)} 
+                    className={`SettingParamsBest-block ${
+                      item.id === setting ? "SettingParamsBest-block-active" : ""
+                    }`}>
+                <span>{item.name}</span>
+              </div>
+      })}
+
+      <div onClick={onVisibleSetting} className={`top-bottum ${visible?"top-bottum-active":""}`}>
         <span></span>
       </div>
     </div>

@@ -181,8 +181,14 @@ main {
 }
 .SMbottum {
   background-color: var(--mainGreen);
-  bottom: 10px;
-  right: 10px;
+  font-family: var(--mainFontsGithic), sans-serif;
+  top: 31%;
+  font-size: 19px;
+  text-transform: uppercase;
+  font-weight: 900;
+  right: 27%;
+  /* bottom: 10px;
+  right: 10px; */
 }
 .sect_LK-title span {
   text-transform: uppercase;

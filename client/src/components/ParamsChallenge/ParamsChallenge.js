@@ -2,7 +2,14 @@ import React from "react";
 
 import "./ParamsChallenge.css";
 
-const ParamsChallenge = ({ itemTeam, onFilterChange, filter }) => {
+const ParamsChallenge = ({
+  itemTeam,
+  onFilterChange,
+  filter,
+  prom,
+  setting,
+  filterParam,
+}) => {
   return (
     <React.Fragment>
       <ul className="ParamsChallenge-container">
@@ -22,15 +29,22 @@ const ParamsChallenge = ({ itemTeam, onFilterChange, filter }) => {
         })}
       </ul>
       <div className="SettingChallenge-container">
-        <div className="SettingChallenge-block">
-          <span>По популярности</span>
-        </div>
-        <div className="SettingChallenge-block">
-          <span>По дате добавления</span>
-        </div>
+        {filterParam.map((item) => {
+          return (
+            <div
+              key={item.id}
+              onClick={() => prom(item.id, item.id)}
+              className={`SettingChallenge-block ${
+                item.id === setting ? "SettingChallenge-block-active" : ""
+              }`}
+            >
+              <span>{item.name}</span>
+            </div>
+          );
+        })}
         <div className="SettingChallenge-add">
           <span>Принять участие</span>
-          <img src="img/addUser.png" alt="addUser"/>
+          <img src="img/addUser.png" alt="addUser" />
         </div>
       </div>
     </React.Fragment>

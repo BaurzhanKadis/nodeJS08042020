@@ -16,6 +16,12 @@
   padding: 10px;
   color: var(--mainWhite)
 }
+.ShowVideoBM-wrapper .date {
+  font-family: var(--mainFontsGithic), sans-serif;
+  font-size: 14px;
+  padding: 0 10px;
+  color: var(--mainWhite);
+}
 .ShowVideoBM-wrapper .top_info-avatar {
   height: 50px;
 }

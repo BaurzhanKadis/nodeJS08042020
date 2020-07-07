@@ -12,14 +12,15 @@ class Primary extends Component {
           <p className="sale_title">
             <span>Новая колекция уже в продаже!</span>
           </p>
-          <img src="img/title.png" alt="" />
-          <Link
+          <img src="img/banner2.jpg" alt="banner" />
+          <a className="banner_link" href="https://losprintos.ru">В магазин</a>
+          {/* <Link
             className="banner_link"
             // to="/shop"
-            to="/"
+            src="https://losprintos.ru"
           >
             В магазин
-          </Link>
+          </Link> */}
         </section>
         <section className="sect_BM">
           <div className="sect_BM-title psevAfter">
@@ -44,13 +45,13 @@ class Primary extends Component {
           </ul>
         </section>
         <section className="sect_SM">
-          <img src="img/__12/m/max.png" alt="max" />
-          <span className="sect_SM-item SMtop">
+          <img src="img/banner3.jpg" alt="banner3" />
+          {/* <span className="sect_SM-item SMtop">
             <span>Испльзуй шанс</span>
           </span>
           <span className="sect_SM-item SMcenter">
             <span>Покажи всем на что ты способен!</span>
-          </span>
+          </span> */}
           <span className="sect_SM-item SMbottum">
             <Link to="/stock-market">Перейти в биржу</Link>
           </span>

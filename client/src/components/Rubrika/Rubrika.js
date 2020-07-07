@@ -24,19 +24,23 @@ const Rubrika = ({ filterTodos, onFilterDone }) => {
           </li>
   })
   return (
-    <div className={`rubrika-container  ${active ? activeUlContainer : ""}`}>
+    <div 
+      className="rubrika-container"
+      // className={`rubrika-container  ${active ? activeUlContainer : ""}`}
+      >
       <span 
-        className={`rubrika-link ${active ? "rubrika-link-Active" : "" }`} 
+        className="rubrika-link" 
+        // className={`rubrika-link ${active ? "rubrika-link-Active" : "" }`} 
         onClick={rubrikaHandler}>
         <i className="fas fa-indent"></i>
-        <span>Рубрика</span>
-        
+        <span>Рубрика</span>  
       </span>
       <ul className="filterDone">
         {liArrFilter}
       </ul>
-      <ul className="rubrika-filters">
+      <ul className={`rubrika-filters ${active ? "rubrika-filters-Active" : "" }`}>
         {liArr}
+        <li onClick={()=>setActive(false)} style={{ background: "var(--mainGreen)" }} className="rubrika-filter">Показать результаты</li>
       </ul>
     </div>
   );

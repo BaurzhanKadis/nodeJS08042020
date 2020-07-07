@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 import "./ShowVideo.css";
 
@@ -44,6 +45,7 @@ const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem }) => {
       <React.Fragment>
       <ReactPlayer url={item.videoUrl} controls width='100%' height='400px'/>
         <div className="progress_bar">
+          <Link to="/rating">
           <span className="procent">{procent}%</span>
           <svg>
             <circle className="circle" cx="25" cy="25" r="25"></circle>
@@ -55,7 +57,9 @@ const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem }) => {
               className="circle2" cx="25" cy="25" r="25"
             ></circle>
           </svg>
+          </Link>
         </div>
+        
       </React.Fragment>
       <ul className="infoBlock">
         <li>

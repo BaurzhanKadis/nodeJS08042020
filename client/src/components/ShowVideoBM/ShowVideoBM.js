@@ -1,13 +1,11 @@
 import React from "react";
 import ReactPlayer from "react-player";
+import { formatDistanceToNow } from 'date-fns'
+import ruLocale from "date-fns/locale/ru";
 
 import "./ShowVideoBM.css";
 
 const ShowVideoBM = ({ video, param }) => {
-  //   const [ active, setActive ] = useState(false)
-  // const playHandler = (id) => {
-  //   console.log("id", id)
-  // }
   const videoBM = video.filter(item=>{return item.type === param}).map((item, id) => {
     return (
       <div key={id} className="ShowVideoBM-wrapper">
@@ -26,7 +24,7 @@ const ShowVideoBM = ({ video, param }) => {
         <ul className="infoBlock">
           <li>
             <img src="img/like.png" alt="like" />
-            <span>1000</span>
+            <span>{item.like}</span>
           </li>
           <li>
             <img src="img/shares.png" alt="shares" />
@@ -41,7 +39,9 @@ const ShowVideoBM = ({ video, param }) => {
           </li>
         </ul>
         <div className="title">{item.title}</div>
-        <div className="date">Добавлено назад</div>
+        <div className="date">
+          Добавлено {formatDistanceToNow(new Date(item.date), { addSuffix: true, locale: ruLocale })}
+        </div>
       </div>
     );
   });
