@@ -17,6 +17,8 @@ import Challenge from './page/Challenge';
 import Diary from './page/Diary';
 import Profile from './page/Profile';
 import Rating from './page/Rating';
+import Message from './page/Message';
+import Search from './page/Search';
 
 
 import './index.css';
@@ -46,6 +48,8 @@ function App() {
         <Route exact path="/diary" component={Diary} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/rating" component={Rating} />
+        <Route exact path="/message" component={Message} />
+        <Route exact path="/search" component={Search} />
         {isAuthenticated ? <Redirect to="/primary" /> : null }
         <BottumMenu />
       </div>

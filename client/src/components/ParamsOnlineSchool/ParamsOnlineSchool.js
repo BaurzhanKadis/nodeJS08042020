@@ -3,15 +3,19 @@ import { Link } from 'react-scroll';
 
 import "./ParamsOnlineSchool.css";
 
-const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange }) => {
+const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange, filterParam, prom, setting, visible, onVisibleSetting }) => {
   const [ activeNavi, setActiveNavi ] = useState(true);
   const widthItemsMidle = 100//средняя ширина блока "lesson_item" 
   const naviHandler = () => {
     setActiveNavi(!activeNavi) 
   }
+  const func = () => {
+    onVisibleSetting()
+    setActiveNavi(true) 
+  }
   return (// href={`#sec${id+1}`}
     <React.Fragment>
-      <ul className="ParamsOnlineSchool-container">
+      <ul className={`ParamsOnlineSchool-container ${visible?"ParamsOnlineSchool-container-active":""}`}>
         {itemTeam.map((item, id) => {
           return (
             <li
@@ -29,7 +33,7 @@ const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange }) => {
           );
         })}
       </ul>
-      <div className="lessonNavi" onClick={naviHandler}>
+      <div className={`lessonNavi ${visible?"lessonNavi-active":""}`} onClick={naviHandler}>
         <img src="img/arrow.png" alt="arrow"/>
         <span>Навигация по урокам</span>
       </div>
@@ -45,6 +49,24 @@ const ParamsOnlineSchool = ({ itemTeam, lesson, filter, onFilterChange }) => {
             );
           })}
         </ul>
+      </div>
+      <div className="SettingChallenge-container">
+      {filterParam.map((item) => {
+          return (
+            <div
+              key={item.id}
+              onClick={() => prom(item.id, item.id)}
+              className={`ParamsOnlineSchool-duble SettingChallenge-block ${
+                item.id === setting ? "SettingChallenge-block-active" : ""
+              }`}
+            >
+              <span>{item.name}</span>
+            </div>
+          );
+        })}
+        <div onClick={func} className={`top-bottum ${visible?"top-bottum-active":""}`}>
+          <span></span>
+        </div>
       </div>
     </React.Fragment>
   );

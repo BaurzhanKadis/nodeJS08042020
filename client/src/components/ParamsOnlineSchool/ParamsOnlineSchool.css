@@ -2,8 +2,19 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--mainGreyLight);
-  padding: 10px;
+  padding: 0;
+  overflow: hidden;
   margin: 0;
+  height: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.ParamsOnlineSchool-container-active {
+  height: 130px;
+  padding: 10px;
 }
 .ParamsOnlineSchool-block {
   cursor: pointer;
@@ -56,9 +67,20 @@
   color: var(--mainWhite);
   font-size: 14px;
   font-family: var(--mainFontsGithic), sans-serif;
-  padding: 10px;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
   background-color: var(--mainBlack);
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.lessonNavi-active {
+  height: 55px;
+  padding: 10px;
 }
 .lessonNavi img {
   width: 30px;
@@ -95,7 +117,11 @@
   font-size: 14px;
   font-family: var(--mainFontsGithic), sans-serif;
 }
-
+/*  */
+.ParamsOnlineSchool-duble {
+  width: 105px!important;
+} 
+/*  */
 @media (max-width: 400px) {
   .ParamsOnlineSchool-block {
     width: 100px;

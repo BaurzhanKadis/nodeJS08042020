@@ -1,6 +1,6 @@
 .BottumMenu-container {
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   bottom: -1px;
   width: 100%;
   padding: 10px 0;
@@ -48,19 +48,3 @@
   width: 23px;
   height: 23px;
 }
-/* для примера */
-.BottumMenu-img-message, .BottumMenu-img-search {
-  position: fixed;
-  top: 60px;
-  left: -100%;
-  width: 100%;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-}
-.BottumMenu-img-message_active, .BottumMenu-img-search_active {
-  left: 0;
-}
-/*  */

@@ -144,7 +144,8 @@
 }
 .VideoChallenge-container .title {
   font-family: var(--mainFontsGithic), sans-serif;
-  font-size: 24px;
+  font-size: 20px;
+  font-style: italic;
   padding: 10px 10px 0;
   color: var(--mainWhite);
 }
