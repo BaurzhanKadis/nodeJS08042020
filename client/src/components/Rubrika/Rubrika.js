@@ -8,7 +8,7 @@ const Rubrika = ({ filterTodos, onFilterDone }) => {
   const rubrikaHandler = () => {
     !active ? setActive(true) : setActive(false);
   }
-  const activeUlContainer = "rubrika-container-active";
+  // const activeUlContainer = "rubrika-container-active";
 
   const liArr = filterTodos.map((item) => {
     const clazz = item.active ? "activeLiRubrica" : "";

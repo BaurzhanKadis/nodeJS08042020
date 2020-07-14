@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from "react";
 import { Route, Redirect } from "react-router-dom";
-import { AuthContext } from './context/AuthContext';
+import { AuthContext, ButtonContext } from './context/AuthContext';
 import { useAuth } from "./hooks/auth.hook";
+import { useButton } from "./hooks/button.hook";
 
 import Auth from "./page/Auth";
 import Primary from "./page/Primary";
@@ -25,15 +26,17 @@ import './index.css';
 
 function App() {
   const { login, logout, token, userId, userNickName, menuActive, setMenuActive, menuHandler } = useAuth();
+  const { ballActive, ballHandler, setBallActive } = useButton();
   const isAuthenticated = !!token;
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setLoad(false), 5000);
   });
-
+//  ballActive, ballHandler, setBallActive 
   return (
-    <AuthContext.Provider value={{ login, logout, token, userId, userNickName, setMenuActive, menuActive, menuHandler }}>
+    <AuthContext.Provider value={{ login, logout, token, userId, userNickName, setMenuActive, menuActive, menuHandler,}}>
+      <ButtonContext.Provider value={{ ballActive, ballHandler, setBallActive  }}>
       {load ? <Loaded /> : null}
       <div className={`wrapper ${menuActive ? "overflowHidden" : ""}`}>
         <NavBar />
@@ -53,6 +56,7 @@ function App() {
         {isAuthenticated ? <Redirect to="/primary" /> : null }
         <BottumMenu />
       </div>
+      </ButtonContext.Provider>
     </AuthContext.Provider>
   );
 }

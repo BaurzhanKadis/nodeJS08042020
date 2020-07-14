@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ const progress = (procent) => {
  
 const ShowVideo = ({ video, disLikeHandler, likeHandler, deleteItem }) => {
   // const [disLikeAction, setDisLikeAction] = useState(false)
-  const [modalImg, setModalImg] = useState(false)
+  // const [modalImg, setModalImg] = useState(false)
 
   const youtube =  video.map((item) => {
     const ed = item.like + item.disLike;

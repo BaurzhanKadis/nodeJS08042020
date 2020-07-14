@@ -13,3 +13,9 @@ export const AuthContext = createContext({
   setMenuActive: noop,
   isAuthenticated: false
 })
+
+export const ButtonContext = createContext({
+  ballActive: false,
+  ballHandler: noop,
+  setBallActive: noop,
+})
