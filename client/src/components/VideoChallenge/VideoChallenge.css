@@ -28,6 +28,16 @@
 .VideoChallenge-container .top_info-title {
   padding: 0;
 }
+.VideoChallenge_itemContainer .infoBlock {
+  cursor: pointer;
+}
+.VideoChallenge_itemContainer .infoBlock li:nth-child(1):active {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
 .challenge_add_box, .challenge_add_box-active {
   border: 2px solid #fff;
   width: 37px;

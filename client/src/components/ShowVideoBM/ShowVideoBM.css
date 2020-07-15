@@ -16,6 +16,16 @@
   padding: 10px;
   color: var(--mainWhite)
 }
+.ShowVideoBM-wrapper .infoBlock {
+  cursor: pointer;
+}
+.ShowVideoBM-wrapper .infoBlock li:nth-child(1):active {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
 .ShowVideoBM-wrapper .date {
   font-family: var(--mainFontsGithic), sans-serif;
   font-size: 14px;

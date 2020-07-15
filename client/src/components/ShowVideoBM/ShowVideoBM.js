@@ -5,10 +5,10 @@ import ruLocale from "date-fns/locale/ru";
 
 import "./ShowVideoBM.css";
 
-const ShowVideoBM = ({ video, param }) => {
-  const videoBM = video.filter(item=>{return item.type === param}).map((item, id) => {
+const ShowVideoBM = ({ video, param, onToggleLike }) => {
+  const videoBM = video.filter(item=>{return item.type === param}).map((item) => {
     return (
-      <div key={id} className="ShowVideoBM-wrapper">
+      <div key={item.id} className="ShowVideoBM-wrapper">
         <div className="top_info">
           <div className="top_info-avatar">
             <img src={item.img} alt="avatar" />
@@ -22,7 +22,7 @@ const ShowVideoBM = ({ video, param }) => {
           <ReactPlayer url={item.url} controls width="100%" height="100%" />
         </div>
         <ul className="infoBlock">
-          <li>
+          <li onClick={()=>onToggleLike(item.id)}>
             <img src="img/like.png" alt="like" />
             <span>{item.like}</span>
           </li>

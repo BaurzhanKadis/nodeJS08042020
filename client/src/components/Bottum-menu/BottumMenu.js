@@ -5,25 +5,29 @@ import { AuthContext, ButtonContext } from "../../context/AuthContext";
 import "./BottumMenu.css";
 
 const BottumMenu = () => {
-  const [ label, setLabel ] = useState(1);
-  const [ toggleItem, setToggleItem ] = useState(false);
+  const [label, setLabel] = useState(0);
+  const [toggleItem, setToggleItem] = useState(false);
 
   const auth = useContext(AuthContext);
   const buttonBall = useContext(ButtonContext);
   const arr = [
-    { id: 1, name: `В раздел "Челленджи"`, url: "/challenge" },
-    { id: 2, name: `В раздел "LIKES KILL"`, url: "/likes-kill" },
-    { id: 3, name: `В раздел "Дневник"`, url: "/diary" },
-    { id: 4, name: `В раздел "Коробка"`, url: "/box" },
+    { id: 0, name: `В раздел "Челленджи"`, url: "/challenge" },
+    { id: 1, name: `В раздел "LIKES KILL"`, url: "/likes-kill" },
+    { id: 2, name: `В раздел "Дневник"`, url: "/diary" },
+    { id: 3, name: `В раздел "Коробка"`, url: "/box" },
   ];
-  // const onToggleLable = (id) => {
-  //   setLabel(id);
-  // }
+  const exit = () => {
+    setToggleItem(false);
+    buttonBall.ballHandler();
+  };
+  const yes = () => {
+    setToggleItem(false);
+    buttonBall.ballHandler();
+  };
   const addModal = (id) => {
     setLabel(id);
-    // setToggleItem(!toggleItem)
-  }
-  console.log(toggleItem)
+    setToggleItem(true);
+  };
   return (
     <React.Fragment>
       <div className="BottumMenu-container">
@@ -53,33 +57,45 @@ const BottumMenu = () => {
             </Link>
           </li>
           <li className="BottumMenuLi-item" onClick={auth.menuHandler}>
-            {/* <Link to="#" > */}
             <img src="img/menuSetting.png" alt="menuSetting" />
-            {/* </Link> */}
           </li>
         </ul>
       </div>
-      <div className={`BottumMenu-modal ${buttonBall.ballActive?"BottumMenu-modal-active":""}`}>
+      <div
+        className={`BottumMenu-modal ${
+          buttonBall.ballActive ? "BottumMenu-modal-active" : ""
+        }`}
+      >
         <h4>Добавить публикацию</h4>
-        {!toggleItem && <ul className="BottumMenu-modal_items">
+        <ul className="BottumMenu-modal_items">
           {arr.map((item) => {
-              return (
-                <li
-                  key={item.id}
-                  onClick={()=>addModal(item.id)}
-                  className={`BottumMenu-modal_item ${item.id === label ? "BottumMenu-modal_item-active" : ""}`}
-                >
-                  {item.name}
-                </li>
-              );
+            return (
+              <li
+                key={item.id}
+                onClick={() => addModal(item.id)}
+                // className={`BottumMenu-modal_item ${
+                //   item.id === label ? "BottumMenu-modal_item-active" : ""
+                // }`}
+                className="BottumMenu-modal_item"
+              >
+                {item.name}
+              </li>
+            );
           })}
-        </ul>}
-        { toggleItem && <div className="modal_YesOrNo">
-                <span>Перейти {arr[label].name}</span>
-                <span><Link to={arr[label].url}>Да</Link></span>
-                <span>Нет</span>
-              </div>
-        }
+        </ul>
+        <div
+          className={`modal_YesOrNo ${
+            toggleItem ? "modal_YesOrNo-active" : ""
+          }`}
+        >
+          <span>Перейти {arr[label].name}</span>
+          <span>
+            <Link onClick={yes} to={arr[label].url}>
+              Да
+            </Link>
+          </span>
+          <span onClick={exit}>Нет</span>
+        </div>
       </div>
     </React.Fragment>
   );

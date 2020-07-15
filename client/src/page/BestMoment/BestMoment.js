@@ -10,6 +10,7 @@ class BestMoment extends Component {
   state = {
     video: [
       {
+        id: 1,
         title: `Гол Юрия Жиркова в ворота "Спартака" на 41 минуте матча`,
         // name: "G-Drive TV",
         // city: "Москва, Стадион Открытие Арена",
@@ -24,6 +25,7 @@ class BestMoment extends Component {
         like: 2000
       },
       {
+        id: 2,
         title: "MEXES забил сумашедший гол через себя в Лиге Чемпионов",
         // name: "Marafon TV",
         // city: "Италия, Стадион Сан-Сиро",
@@ -38,6 +40,7 @@ class BestMoment extends Component {
         like: 1990
       },
       {
+        id: 3,
         title: `Дальний удар Ивана Облякова в ворота "Краснодара"`,
         // name: "МатчПРЕМЬЕР",
         // city: "Краснодар",
@@ -52,6 +55,7 @@ class BestMoment extends Component {
         like: 199
       },
       {
+        id: 4,
         title: "Нападающий ФК Подольск ловко обманул вратаря и забил красивый гол",
         // name: "4-3-3Channel",
         // city: "Россия, Домодедово",
@@ -66,6 +70,7 @@ class BestMoment extends Component {
         like: 3000
       },
       {
+        id: 5,
         title: "Анна Воронина на 81 минуте оформляет хет-трик",
         // name: "ФК Дончанка",
         // city: "Россия, Новошахтинск",
@@ -80,6 +85,7 @@ class BestMoment extends Component {
         like: 4201
       },
       {
+        id: 6,
         title: "Екатерина Сивец исполнила отличный дальний удар",
         // name: "ФК Дончанка",
         // city: "Россия, Новошахтинск",
@@ -94,6 +100,7 @@ class BestMoment extends Component {
         like: 1990
       },
       {
+        id: 7,
         title: "Идеальная траектория удара",
         // name: "Ритм Футбола",
         // city: "Россия, Суздаль",
@@ -108,6 +115,7 @@ class BestMoment extends Component {
         like: 5555
       },
       {
+        id: 8,
         title: `Победный гол Андрея Миронова в финале турнира "Кожанный мяч" (Волга 0:1 Днепр)`,
         // name: "Ритм Футбола",
         // city: "Россия, Суздаль",
@@ -122,6 +130,7 @@ class BestMoment extends Component {
         like: 1991
       },
       {
+        id: 9,
         title: "Нападающая английской сборной Джессика Адамс точным ударом перекинула вратаря и отправила мяч в ворота сборной Алжира. (Англия 1:0 Алжир)",
         // name: "FootWoman",
         // city: "Англия, Лондон",
@@ -136,6 +145,7 @@ class BestMoment extends Component {
         like: 418
       },
       {
+        id: 10,
         title: "Алиса Кёльн удивила всех своим потрясающим ударом.(Германия 5:1 Норвегия)",
         // name: "FootWoman",
         // city: "Германия, Нюрнберг",
@@ -150,6 +160,7 @@ class BestMoment extends Component {
         like: 1984
       },
       {
+        id: 11,
         title: "Гол с 25 метров в матче женского чемпионата России.",
         // name: "Георгий Черданцев",
         // city: "Россия, Рязань",
@@ -164,6 +175,7 @@ class BestMoment extends Component {
         like: 184
       },
       {
+        id: 12,
         title: "Вышел на балкон и увидел настоящее Дерби",
         // name: "Георгий Черданцев",
         // city: "Россия, Москва",
@@ -178,6 +190,7 @@ class BestMoment extends Component {
         like: 194
       },
       {
+        id: 13,
         title: "Обманул финтом вратаря и забил",
         // name: "SKILLTWINS",
         // city: "Россия, Магадан",
@@ -192,6 +205,7 @@ class BestMoment extends Component {
         like: 912
       },
       {
+        id: 14,
         title: "Вы только посмотрите на этот космический пенальти!",
         // name: "FINITO",
         // city: "Россия, Подольск",
@@ -206,6 +220,7 @@ class BestMoment extends Component {
         like: 1977
       },
       {
+        id: 15,
         title: "Болельщики в Польше",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -217,6 +232,7 @@ class BestMoment extends Component {
         like: 1945
       },
       {
+        id: 16,
         title: "Огни на трибуне",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -228,6 +244,7 @@ class BestMoment extends Component {
         like: 2541
       },
       {
+        id: 17,
         title: "Комбинация 1",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -239,6 +256,7 @@ class BestMoment extends Component {
         like: 458
       },
       {
+        id: 18,
         title: "Комбинация 2",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -250,6 +268,7 @@ class BestMoment extends Component {
         like: 2541
       },
       {
+        id: 19,
         title: "Сейв Льва Яшина",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -261,6 +280,7 @@ class BestMoment extends Component {
         like: 9000
       },
       {
+        id: 20,
         title: "Сейв Акинфеева",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -272,6 +292,7 @@ class BestMoment extends Component {
         like: 10000
       },
       {
+        id: 21,
         title: "Отменили гол Боруссии",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -283,6 +304,7 @@ class BestMoment extends Component {
         like: 4521
       },
       {
+        id: 22,
         title: "Прокатился по полю",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -294,6 +316,7 @@ class BestMoment extends Component {
         like: 6540
       },
       {
+        id: 23,
         title: "Горячий танец",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -305,6 +328,7 @@ class BestMoment extends Component {
         like: 1457
       },
       {
+        id: 24,
         title: "Прекрасный сэйв",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -316,6 +340,7 @@ class BestMoment extends Component {
         like: 2547
       },
       {
+        id: 25,
         title: "Испанский стиль",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -327,6 +352,7 @@ class BestMoment extends Component {
         like: 1256
       },
       {
+        id: 26,
         title: "Детский дриблинг",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -338,6 +364,7 @@ class BestMoment extends Component {
         like: 2547
       },
       {
+        id: 27,
         title: "Лопнул",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -349,6 +376,7 @@ class BestMoment extends Component {
         like: 1894
       },
       {
+        id: 28,
         title: "Оказали первую помощь",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -360,6 +388,7 @@ class BestMoment extends Component {
         like: 2547
       },
       {
+        id: 29,
         title: "Сейв Де Хеа",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -371,6 +400,7 @@ class BestMoment extends Component {
         like: 999
       },
       {
+        id: 30,
         title: "Сейв Кейлора Наваса",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -382,6 +412,7 @@ class BestMoment extends Component {
         like: 2547
       },
       {
+        id: 31,
         title: "Оранжевый перфоманс",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -393,6 +424,7 @@ class BestMoment extends Component {
         like: 888
       },
       {
+        id: 32,
         title: "Фанаты поют",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -404,6 +436,7 @@ class BestMoment extends Component {
         like: 2547
       },
       {
+        id: 33,
         title: "Дриблинг Атлетико",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -415,6 +448,7 @@ class BestMoment extends Component {
         like: 754
       },
       {
+        id: 34,
         title: "Барса финтит",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -426,6 +460,7 @@ class BestMoment extends Component {
         like: 1555
       },
       {
+        id: 35,
         title: "Forza Barca",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -437,6 +472,7 @@ class BestMoment extends Component {
         like: 1245
       },
       {
+        id: 36,
         title: "PSJ комбинация",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -448,6 +484,7 @@ class BestMoment extends Component {
         like: 1555
       },
       {
+        id: 37,
         title: "Краснодарские фанаты",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -459,6 +496,7 @@ class BestMoment extends Component {
         like: 1555
       },
       {
+        id: 38,
         title: "Трибуна Белграда",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -470,6 +508,7 @@ class BestMoment extends Component {
         like: 1900
       },
       {
+        id: 39,
         title: "Дриблинг Саллаха",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -481,6 +520,7 @@ class BestMoment extends Component {
         like: 1475
       },
       {
+        id: 40,
         title: "Дриблинг Барсы",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -492,6 +532,7 @@ class BestMoment extends Component {
         like: 1685
       },
       {
+        id: 41,
         title: "Сейв Куртуа",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -503,6 +544,7 @@ class BestMoment extends Component {
         like: 1356
       },
       {
+        id: 42,
         title: "Сейф Евгения Галиковича",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -514,6 +556,7 @@ class BestMoment extends Component {
         like: 1685
       },
       {
+        id: 43,
         title: "Сальто через вратаря",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -524,6 +567,7 @@ class BestMoment extends Component {
         date: "Wed Jul 08 2020 11:03:12",
         like: 1287
       },{
+        id: 44,
         title: "Подсмотрел записку",
         name: "LIKE SKILL",
         city: "Россия, Москва",
@@ -558,6 +602,21 @@ class BestMoment extends Component {
       {id:2, name: "По дате добавления"}
     ]
   };
+  onToggleLike = (id) => {
+    this.setState(({ video }) => {
+      const idx = video.findIndex((el) => el.id === id);
+      const oldItem = video[idx];
+      const newItem = { ...oldItem, like: oldItem.like + 1 };
+      const newArray = [ 
+        ...video.slice(0, idx),
+        newItem,
+        ...video.slice(idx + 1)
+      ];
+      return {
+        video: newArray
+      }
+    })
+  }
   onParamChange = (param) => {
     this.setState({ param });
   }
@@ -607,7 +666,7 @@ class BestMoment extends Component {
           <ParamsTypes param={this.state.param} onParamChange={this.onParamChange} paramsTypes={this.state.paramsTypes}/>
         </div>
         <SettingParamsBest prom={this.prom} setting={this.state.setting} filterParam={this.state.filterParam} onVisibleSetting={this.onVisibleSetting} visible={this.state.visible}/>
-        <ShowVideoBM param={this.state.param} video={visibleItems} />
+        <ShowVideoBM onToggleLike={this.onToggleLike} param={this.state.param} video={visibleItems} />
       </div>
     );
   }
