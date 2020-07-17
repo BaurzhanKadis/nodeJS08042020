@@ -5,7 +5,6 @@ export const useButton = () => {
   
   const ballHandler = useCallback(() => {
     !ballActive ? setBallActive(true) : setBallActive(false);
-    console.log(ballActive)
   }, [ballActive, setBallActive])
 
   return {

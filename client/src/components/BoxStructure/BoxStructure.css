@@ -13,8 +13,10 @@
 }
 .BoxStructure_matrix li {
   display: grid;
+  grid-template-columns: auto auto 100px;
   grid-template-areas: "address address address"
-                       "people rating more";
+                       "people rating more"
+                       "title title title";
   grid-gap: 5px;
 }
 .BoxStructure_address {
@@ -55,4 +57,16 @@
   padding: 5px;
   height: max-content;
   cursor: pointer;
+}
+.BoxStructure_titleLI {
+  grid-area: title; 
+  height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--mainGreen);
+  font-family: var(--mainFontsGithic), sans-serif;
+  font-size: 14px;
+  color: var(--mainGreen);
+}
+.BoxStructure_titleLI-active {
+  height: auto;
 }

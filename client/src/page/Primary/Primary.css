@@ -39,6 +39,13 @@ main {
   color: var(--mainGreen);
   background-color: var(--mainWhite);
 }
+/* .contantForUl {
+  overflow-x: scroll;
+  position: relative;
+}
+.contantForUl .sect_BM-items{
+  width: 600px;
+} */
 .sect_BM,
 .sect_OS,
 .sect_LK {
@@ -48,9 +55,15 @@ main {
 .sect_SM {
   position: relative;
 }
+/* .sect_BM .slick-list {
+  height: 200px;
+  width: 90%;
+  margin: 0 auto;
+} */
 .sect_BM-title,
 .sect_OS-title,
 .sect_LK-title {
+  margin-bottom: 5px;
   font-size: 14px;
   display: inline-block;
   position: relative;
@@ -82,6 +95,9 @@ main {
 .sect_OS-item img {
   width: 100%;
 }
+/* .sect_BM-item {
+  width: 100px;
+} */
 .sect_BM-rubrika {
   font-size: 8px;
   text-decoration: underline;
@@ -203,5 +219,11 @@ main {
   height: 1px;
   background-color: var(--mainGreen);
 }
-@media (max-width: 480px) {
-}
+/* .slick-prev {
+  left: 0!important;
+} 
+.slick-next {
+  right: 0!important;
+} */
+/* @media (max-width: 480px) {
+} */
