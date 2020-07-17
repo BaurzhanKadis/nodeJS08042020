@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import ReactPlayer from "react-player";
-import Slider from 'react-slick-slider';
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import "./Primary.css";
 
@@ -74,13 +69,6 @@ class Primary extends Component {
     ]
   }
   render() {
-    const video = this.state.video;
-    const settings = {
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
     return (
       <main>
         <section className="banner">
@@ -95,22 +83,6 @@ class Primary extends Component {
           <div className="sect_BM-title psevAfter">
             <Link to="/best-moment">Лучшие моменты</Link>
           </div>
-          {/* <Slider {...settings}>
-            {video.map((item)=>{
-              return <div>
-                <div className="top_info">
-          <div className="top_info-avatar">
-            <img src={item.img} alt="avatar" />
-          </div>
-          <div className="top_info-title">
-            <span className="top_info-title_nickName">{item.name}</span>
-            <span className="top_info-title_fillName">{item.city}</span>
-          </div>
-        </div>
-                      <ReactPlayer url={item.url} controls width="100%" height="100%" />
-                    </div>
-            })}
-          </Slider> */}
           <div className="contantForUl">
             <ul className="sect_BM-items">
               <li className="sect_BM-item">
@@ -128,16 +100,6 @@ class Primary extends Component {
                 <div className="sect_BM-isname">Potapov10</div>
                 <div className="sect_BM-rubrika">Рубрика "Удар с летая"</div>
               </li>
-              {/* <li className="sect_BM-item">
-                <img src="img/potap10.png" alt="bail" />
-                <div className="sect_BM-isname">Potapov10</div>
-                <div className="sect_BM-rubrika">Рубрика "Удар с летая"</div>
-              </li>
-              <li className="sect_BM-item">
-                <img src="img/potap10.png" alt="bail" />
-                <div className="sect_BM-isname">Potapov10</div>
-                <div className="sect_BM-rubrika">Рубрика "Удар с летая"</div>
-              </li> */}
             </ul>
           </div>
         </section>
